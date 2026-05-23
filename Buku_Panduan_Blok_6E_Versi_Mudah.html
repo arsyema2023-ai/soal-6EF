@@ -1,0 +1,3398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📘 Buku Panduan Blok 6E - Neurologi & Psikiatri (Versi Mudah)</title>
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --secondary: #2d5a87;
+            --accent: #e67e22;
+            --success: #27ae60;
+            --danger: #c0392b;
+            --warning: #f39c12;
+            --light: #f8f9fa;
+            --text: #2c3e50;
+            --soft-blue: #e3f2fd;
+            --soft-green: #e8f5e9;
+            --soft-yellow: #fff8e1;
+            --soft-red: #ffebee;
+            --soft-purple: #f3e5f5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #f0f2f5;
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-badge {
+            background: rgba(255,255,255,0.25);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* NAV */
+        .nav-wrap {
+            background: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-scroll {
+            display: flex;
+            gap: 0.6rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        .nav-btn {
+            padding: 0.7rem 1.3rem;
+            border: none;
+            border-radius: 30px;
+            background: #e9ecef;
+            color: var(--text);
+            cursor: pointer;
+            white-space: nowrap;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(30,58,95,0.3);
+        }
+
+        /* SECTIONS */
+        .section {
+            display: none;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.7rem;
+            border-bottom: 4px solid var(--accent);
+            display: inline-block;
+        }
+
+        .section-intro {
+            background: var(--soft-blue);
+            padding: 1.5rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--secondary);
+            font-size: 1.05rem;
+        }
+
+        /* CARDS */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border-left: 6px solid var(--accent);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            background: var(--soft-blue);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .card-body {
+            color: #444;
+            font-size: 1.05rem;
+        }
+
+        .card-body p {
+            margin-bottom: 0.8rem;
+        }
+
+        .card-body ul {
+            margin-left: 1.5rem;
+            margin-top: 0.8rem;
+        }
+
+        .card-body li {
+            margin-bottom: 0.6rem;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffeaa7 0%, #ffeaa7 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 88%;
+            padding: 0 4px;
+            font-weight: 600;
+        }
+
+        .highlight-blue {
+            background: linear-gradient(120deg, #74b9ff 0%, #74b9ff 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 88%;
+            padding: 0 4px;
+            color: white;
+        }
+
+        .highlight-green {
+            background: linear-gradient(120deg, #00b894 0%, #00b894 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 88%;
+            padding: 0 4px;
+            color: white;
+        }
+
+        .highlight-red {
+            background: linear-gradient(120deg, #ff7675 0%, #ff7675 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 88%;
+            padding: 0 4px;
+            color: white;
+        }
+
+        /* QUESTION CARD */
+        .q-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border-left: 6px solid var(--danger);
+        }
+
+        .q-number {
+            display: inline-block;
+            background: var(--danger);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .q-text {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .q-answer {
+            background: var(--soft-green);
+            padding: 1.2rem;
+            border-radius: 14px;
+            border-left: 5px solid var(--success);
+            margin-bottom: 1rem;
+        }
+
+        .q-answer-title {
+            font-weight: 700;
+            color: var(--success);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .q-explain {
+            background: var(--soft-blue);
+            padding: 1.5rem;
+            border-radius: 14px;
+            border-left: 5px solid var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .q-explain-title {
+            font-weight: 700;
+            color: var(--secondary);
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .q-explain p {
+            margin-bottom: 0.8rem;
+        }
+
+        .q-explain ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .q-explain li {
+            margin-bottom: 0.5rem;
+        }
+
+        .q-tip {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            padding: 1.2rem;
+            border-radius: 14px;
+            border-left: 5px solid var(--warning);
+        }
+
+        .q-tip-title {
+            font-weight: 700;
+            color: var(--warning);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .q-analogy {
+            background: var(--soft-purple);
+            padding: 1.2rem;
+            border-radius: 14px;
+            border-left: 5px solid #9c27b0;
+            margin-top: 1rem;
+        }
+
+        .q-analogy-title {
+            font-weight: 700;
+            color: #9c27b0;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* MNEMONIC BOX */
+        .mnemonic-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            text-align: center;
+            border: 3px dashed var(--accent);
+        }
+
+        .mnemonic-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .mnemonic-text {
+            font-size: 1.15rem;
+            line-height: 2;
+            color: var(--text);
+        }
+
+        .mnemonic-big {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--danger);
+            display: block;
+            margin: 1rem 0;
+        }
+
+        /* TABLES */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 2rem 0;
+            border-radius: 16px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 0.9rem 1rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        /* STEP BOX */
+        .step-box {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 2px solid #e9ecef;
+        }
+
+        .step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-right: 0.8rem;
+        }
+
+        .step-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        /* COMPARISON */
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .compare-box {
+            padding: 1.5rem;
+            border-radius: 16px;
+        }
+
+        .compare-left {
+            background: var(--soft-blue);
+            border-left: 5px solid var(--secondary);
+        }
+
+        .compare-right {
+            background: var(--soft-green);
+            border-left: 5px solid var(--success);
+        }
+
+        .compare-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.6rem; }
+            .section-title { font-size: 1.4rem; }
+            .compare-grid { grid-template-columns: 1fr; }
+            .card { padding: 1.5rem; }
+            .q-card { padding: 1.5rem; }
+        }
+
+        /* PRINT */
+        @media print {
+            .nav-wrap { display: none; }
+            .section { display: block !important; page-break-before: always; }
+        }
+
+        /* DASHBOARD SPECIAL */
+        .welcome-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-box p {
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .quick-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .quick-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.15rem;
+        }
+
+        .quick-card p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--warning), var(--success));
+            border-radius: 3px;
+            margin: 2.5rem 0;
+        }
+
+        .note-box {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .note-box p {
+            margin: 0;
+            color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>📘 Buku Panduan Blok 6E</h1>
+    <p>Neurologi & Psikiatri untuk Mahasiswa Kedokteran<br>Versi Mudah Dipahami dengan Bahasa Santai</p>
+    <div class="hero-badges">
+        <span class="hero-badge">🧠 89 Soal Lengkap</span>
+        <span class="hero-badge">📚 16 Bab Materi</span>
+        <span class="hero-badge">🎯 Analogi Mudah</span>
+        <span class="hero-badge">💡 Tips Hafalan</span>
+    </div>
+</div>
+
+<!-- NAV -->
+<div class="nav-wrap">
+    <div class="nav-scroll">
+        <button class="nav-btn active" onclick="showSection('beranda')">🏠 Beranda</button>
+        <button class="nav-btn" onclick="showSection('stroke')">🩸 Stroke</button>
+        <button class="nav-btn" onclick="showSection('epilepsi')">⚡ Epilepsi</button>
+        <button class="nav-btn" onclick="showSection('vertigo')">🌀 Vertigo</button>
+        <button class="nav-btn" onclick="showSection('infeksi')">🦠 Infeksi SSP</button>
+        <button class="nav-btn" onclick="showSection('parkinson')">🎯 Parkinson</button>
+        <button class="nav-btn" onclick="showSection('tumor')">🧬 Tumor</button>
+        <button class="nav-btn" onclick="showSection('trauma')">🤕 Trauma</button>
+        <button class="nav-btn" onclick="showSection('encefalitis')">🧪 Ensefalitis</button>
+        <button class="nav-btn" onclick="showSection('gerak')">🏃 Gerak</button>
+        <button class="nav-btn" onclick="showSection('nyeri')">🤯 Nyeri Kepala</button>
+        <button class="nav-btn" onclick="showSection('psikiatri')">🧩 Psikiatri</button>
+        <button class="nav-btn" onclick="showSection('anatomi')">🗺️ Anatomi</button>
+        <button class="nav-btn" onclick="showSection('lcs-gcs')">💉 LCS & GCS</button>
+        <button class="nav-btn" onclick="showSection('daftar')">📋 Daftar Soal</button>
+    </div>
+</div>
+
+<!-- BERANDA -->
+<div id="beranda" class="section active">
+    <div class="welcome-box">
+        <h2>👋 Selamat Datang di Buku Panduan Blok 6E!</h2>
+        <p>Halo dokter muda! 👨‍⚕️👩‍⚕️ Buku ini dibuat khusus untuk membantu kamu memahami materi Blok 6E (Neurologi & Psikiatri) dengan cara yang <strong>sangat mudah</strong>. Tidak ada bahasa yang terlalu ilmiah, semua dijelaskan dengan bahasa santai dan analogi kehidupan sehari-hari.</p>
+    </div>
+
+    <h2 class="section-title">📌 Cara Menggunakan Buku Ini</h2>
+
+    <div class="quick-grid">
+        <div class="quick-card">
+            <h3>1️⃣ Pilih Topik</h3>
+            <p>Geser tombol navigasi di atas, lalu klik topik yang ingin kamu pelajari. Ada 16 topik lengkap!</p>
+        </div>
+        <div class="quick-card">
+            <h3>2️⃣ Baca Ringkasan</h3>
+            <p>Setiap topik diawali dengan ringkasan materi dalam bentuk kartu yang mudah dibaca.</p>
+        </div>
+        <div class="quick-card">
+            <h3>3️⃣ Pelajari Soal</h3>
+            <p>Setiap soal dibahas dengan 4 bagian: Jawaban, Penjelasan Detail, Analogi, dan Tips Hafalan.</p>
+        </div>
+        <div class="quick-card">
+            <h3>4️⃣ Hafal Mnemonik</h3>
+            <p>Setiap topik ada kotak mnemonik berwarna kuning yang berisi kata-kata mudah diingat.</p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 class="section-title">🗺️ Peta Materi Blok 6E</h2>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🧠</span>
+            <span class="card-title">Neurologi (Bagian Fisik Otak & Saraf)</span>
+        </div>
+        <div class="card-body">
+            <p><strong>Neurologi</strong> itu pelajaran tentang otak, saraf, dan segala gangguan yang terjadi di sistem saraf. Bayangkan otak itu seperti <span class="highlight">komputer utama</span> tubuh kita. Kalau komputernya rusak, semua program di tubuh jadi error.</p>
+            <ul>
+                <li><strong>Stroke:</strong> Otak kekurangan darah/oksigen → seperti komputer mati listrik</li>
+                <li><strong>Epilepsi:</strong> Otak ada korsleting listrik → seperti kabel konslet</li>
+                <li><strong>Vertigo:</strong> Pusat keseimbangan rusak → seperti orang mabuk</li>
+                <li><strong>Parkinson:</strong> Kurang dopamin → seperti robot kehabisan baterai</li>
+                <li><strong>Tumor:</strong> Ada benjolan di otak → seperti harddisk penuh</li>
+                <li><strong>Trauma:</strong> Otak terbentur → seperti komputer jatuh</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🧩</span>
+            <span class="card-title">Psikiatri (Bagian Jiwa & Perilaku)</span>
+        </div>
+        <div class="card-body">
+            <p><strong>Psikiatri</strong> itu pelajaran tentang gangguan jiwa, pikiran, perasaan, dan perilaku. Bayangkan pikiran itu seperti <span class="highlight">software</span> yang menjalankan komputer (otak). Kalau software-nya error, meski hardware baik, hasilnya tetap aneh.</p>
+            <ul>
+                <li><strong>Skizofrenia:</strong> Pikiran kacau → seperti radio yang frekuensinya salah</li>
+                <li><strong>Bipolar:</strong> Mood naik turun ekstrem → seperti roller coaster emosi</li>
+                <li><strong>Depresi:</strong> Sedih berkepanjangan → seperti hujan yang tidak berhenti</li>
+                <li><strong>Demensia:</strong> Pikun → seperti harddisk yang corrupt</li>
+                <li><strong>Fobia:</strong> Takut berlebihan → seperti anak kecil takut monster</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mnemonic-box">
+        <div class="mnemonic-title">🎯 Kunci Sukses Blok 6E</div>
+        <div class="mnemonic-text">
+            <span class="mnemonic-big">"PAHAM → HAFAL → LATIH → LULUS"</span>
+            <p>1. <strong>PAHAM</strong> dulu konsepnya (jangan dihafal mentah-mentah)<br>
+            2. <strong>HAFAL</strong> mnemonik dan kata kunci<br>
+            3. <strong>LATIH</strong> dengan mengerjakan soal-soal<br>
+            4. <strong>LULUS</strong> dengan nilai memuaskan! 🎓</p>
+        </div>
+    </div>
+</div>
+
+<!-- STROKE -->
+<div id="stroke" class="section">
+    <h2 class="section-title">🩸 Stroke: Ketika Otak Kehabisan Darah</h2>
+
+    <div class="section-intro">
+        <strong>Apa itu Stroke?</strong> Stroke adalah kondisi ketika aliran darah ke otak terganggu. Bayangkan otak itu seperti rumah yang membutuhkan listrik (darah + oksigen) untuk menyala. Kalau listriknya mati, rumahnya jadi gelap dan rusak. Ada 2 tipe stroke: <span class="highlight">Iskemik</span> (pipa tersumbat) dan <span class="highlight-red">Hemoragik</span> (pipa bocor).
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">⏰</span>
+            <span class="card-title">Waktu adalah Otak (Time is Brain!)</span>
+        </div>
+        <div class="card-body">
+            <p>Stroke itu <strong>EMERGENCY</strong>! Semakin cepat ditangani, semakin banyak otak yang terselamatkan. Ini seperti kebakaran rumah — semakin cepat pemadam datang, semakin banyak rumah yang bisa diselamatkan.</p>
+            <ul>
+                <li><strong>0-4,5 jam:</strong> Bisa diberi obat pelarut darah (Alteplase) → ini jendela emas!</li>
+                <li><strong>4,5-24 jam:</strong> Masih bisa dilakukan pengangkatan gumpalan darah mekanik</li>
+                <li><strong>>24 jam:</strong> Terlambat, otak sudah banyak yang mati</li>
+            </ul>
+            <p><span class="highlight-red">Ingat: Setiap menit delay = 2 juta neuron mati!</span></p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🚨</span>
+            <span class="card-title">Ciri-ciri Stroke (FAST)</span>
+        </div>
+        <div class="card-body">
+            <p>Kalau kamu melihat seseorang dengan gejala ini, <strong>SEGERA</strong> bawa ke RS!</p>
+            <ul>
+                <li><strong>F (Face/Wajah):</strong> Wajah tidak simetris, senyum sebelah tidak naik → seperti badut yang senyumnya cuma setengah</li>
+                <li><strong>A (Arm/Lengan):</strong> Lengan lemah, tidak bisa diangkat → seperti lengan yang "tidur" (kebas)</li>
+                <li><strong>S (Speech/Bicara):</strong> Bicara pelo, tidak jelas → seperti orang yang baru bangun tidur dan masih ngantuk</li>
+                <li><strong>T (Time/Waktu):</strong> Segera ke RS! Catat waktu mulai gejala!</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mnemonic-box">
+        <div class="mnemonic-title">🧠 Mnemonik: FAST (Ingat ini seumur hidup!)</div>
+        <div class="mnemonic-text">
+            <span class="mnemonic-big">"FAST = Face, Arm, Speech, Time"</span>
+            <p>🎭 <strong>F</strong>ace = Wajah miring<br>
+            💪 <strong>A</strong>rm = Lengan lemah<br>
+            🗣️ <strong>S</strong>peech = Bicara pelo<br>
+            ⏰ <strong>T</strong>ime = Segera ke RS!</p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="color:var(--primary); margin-bottom:1.5rem;">📋 Pembahasan Soal-soal Stroke</h2>
+
+    <!-- SOAL 8 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 8</span>
+        <div class="q-text">Pasien mual-muntah, tekanan di dalam kepala meningkat, tapi tidak ada faktor stroke. Pemeriksaan penunjang yang dilakukan?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: CT Scan Tanpa Kontras</div>
+            <p>CT scan tanpa kontras adalah pemeriksaan <strong>pertama dan wajib</strong> untuk semua kasus emergensi neurologis.</p>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p>Kenapa harus CT scan tanpa kontras dulu?</p>
+            <ul>
+                <li><strong>1. Menyingkirkan perdarahan:</strong> Kalau ada darah di otak, kita TIDAK boleh kasih obat pelarut darah (Alteplase) karena bisa membuat perdarahan makin parah. Ini seperti kalau rumah bocor, kita tidak boleh siram air lagi!</li>
+                <li><strong>2. Lebih cepat:</strong> CT scan hanya butuh waktu 2-5 menit. MRI butuh 30-60 menit. Dalam emergensi, waktu adalah nyawa!</li>
+                <li><strong>3. Lebih murah dan tersedia:</strong> Hampir semua RS punya CT scan, tapi tidak semua punya MRI.</li>
+                <li><strong>4. Bisa deteksi banyak hal:</strong> Edema (bengkak), fraktur tulang, massa/tumor, dan perdarahan.</li>
+            </ul>
+            <p><span class="highlight">CT kontras</span> baru dilakukan SETELAH CT non-kontras, untuk melihat pembuluh darah (CTA) atau tumor.</p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Bayangkan otak itu seperti <strong>rumah</strong>. CT scan tanpa kontras itu seperti <strong>masuk rumah dengan lampu biasa</strong> — kita bisa lihat apakah ada banjir (perdarahan), apakah ada benda asing (tumor), atau apakah dindingnya retak (fraktur). CT kontras itu seperti <strong>masuk rumah dengan lampu UV</strong> — kita bisa lihat pipa-pipa (pembuluh darah) yang tidak terlihat dengan lampu biasa. Tapi kita harus pakai lampu biasa dulu!</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"NON-KONTRAS = NON-NEGOTIABLE"</strong> — Ini artinya CT non-kontras itu MUTLAK dan tidak bisa ditawar-tawar. Semua pasien stroke/suspicion stroke HARUS lewat CT non-kontras dulu. Jangan pernah skip ini!</p>
+        </div>
+    </div>
+
+    <!-- SOAL 50 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 50 (Trapezius)</span>
+        <div class="q-text">Pasien datang dengan keluhan stroke: bicara pelo, kelemahan di satu sisi tubuh. Gold standard pemeriksaan pertama adalah?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: CT Scan Tanpa Kontras</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p>Meskipun MRI DWI lebih sensitif untuk mendeteksi infark (kerusakan akibat kurang darah) dalam waktu <30 menit, <strong>CT scan tanpa kontras tetap menjadi gold standard pemeriksaan PERTAMA</strong> karena:</p>
+            <ul>
+                <li><strong>Waktu adalah faktor krusial:</strong> Dalam emergensi stroke, setiap menit berarti jutaan neuron mati. CT scan bisa selesai dalam 2 menit. MRI butuh waktu lebih lama untuk persiapan.</li>
+                <li><strong>Menyingkirkan perdarahan:</strong> Ini adalah tujuan utama. Kalau ada perdarahan di otak, pemberian obat pelarut darah (Alteplase) akan memperburuk keadaan dan bisa menyebabkan kematian.</li>
+                <li><strong>Aksesibilitas:</strong> CT scan tersedia di hampir semua RS, bahkan RS kecil. MRI hanya ada di RS besar.</li>
+            </ul>
+            <p>Setelah CT non-kontras menunjukkan <strong>tidak ada perdarahan</strong>, barulah bisa dipertimbangkan MRI untuk melihat area infark dengan lebih detail, atau CTA untuk melihat pembuluh darah.</p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Bayangkan kamu adalah <strong>petugas pemadam kebakaran</strong>. Ada telepon masuk bahwa ada kebakaran di sebuah gedung. Sebelum kamu putuskan mau pakai air atau foam, kamu harus lihat dulu apakah gedungnya memang terbakar (iskemik) atau ada kebocoran gas (hemoragik). Kalau salah pilih, bisa meledak! CT scan non-kontras itu seperti <strong>"melihat dari luar gedung dulu"</strong> — cepat dan bisa menentukan strategi selanjutnya.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"CT NON-KONTRAS = PINTU GERBANG"</strong> — Semua pasien stroke harus lewat sini dulu. Baru setelah itu bisa ke MRI/CTA. Jangan pernah kasih Alteplase sebelum CT!</p>
+        </div>
+    </div>
+
+    <!-- SOAL 37 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 37</span>
+        <div class="q-text">Pasien mengalami kelemahan di satu sisi tubuh dan bicara pelo, tapi dalam waktu kurang dari 1 jam semuanya membaik total. Diagnosisnya?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: TIA (Transient Ischemic Attack)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>TIA (Serangan Iskemik Transien)</strong> itu seperti <strong>"peringatan dini"</strong> dari tubuh bahwa ada sesuatu yang salah dengan pembuluh darah ke otak.</p>
+            <ul>
+                <li><strong>Ciri khas TIA:</strong> Gejala stroke (lemah, pelo, dll) yang muncul tapi <strong>sembuh total dalam waktu <24 jam</strong> (biasanya <1 jam).</li>
+                <li><strong>Tidak ada kerusakan permanen:</strong> CT/MRI tidak menunjukkan infark (bekas luka di otak).</li>
+                <li><strong>Tapi jangan diremehkan!</strong> TIA adalah sinyal bahwa stroke "besar" bisa terjadi dalam waktu dekat. 10-15% pasien TIA akan mengalami stroke dalam 90 hari ke depan.</li>
+            </ul>
+            <p><strong>Bedakan dengan RIND:</strong> Reversible Ischemic Neurological Deficit — gejala membaik dalam 24 jam - 7 hari.</p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>TIA itu seperti <strong>"listrik PLN yang padam sebentar lalu nyala lagi"</strong>. Rumahmu gelap 10 menit, lalu lampu nyala lagi. Tapi kamu tahu ada masalah dengan kelistrikan, dan kalau tidak diperbaiki, bisa mati lampu lebih lama (stroke). TIA adalah <strong>warning stroke</strong> — peringatan bahwa stroke sungguhan akan datang.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"TIA = Tiba-tiba Ilang dalam 1 jam"</strong> — Kalau gejala stroke membaik total dalam <1 jam = TIA. Tapi ingat: TIA BUKAN berarti aman! Pasien TIA harus tetap dirawat dan dicegah stroke selanjutnya dengan aspirin, statin, dan kontrol faktor risiko.</p>
+        </div>
+    </div>
+
+    <!-- SOAL 38 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 38</span>
+        <div class="q-text">Pasien datang dengan jantung berdebar-debar tidak teratur, kemudian dirujuk ke dokter jantung. Tapi ternyata pasien juga mengalami kelemahan di tubuh. Diagnosis neurologisnya?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Emboli Cerebri (Stroke Embolik)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Fibrilasi Atrium (FA)</strong> adalah kondisi detak jantung tidak teratur. Karena jantung tidak berdetak teratur, darah bisa menggumpal di dalam rongga jantung (terutama atrium kiri). Gumpalan darah ini bisa lepas dan mengikuti aliran darah ke otak → menyumbat pembuluh darah otak → <strong>stroke embolik</strong>.</p>
+            <ul>
+                <li><strong>FA menyebabkan 20-30% stroke iskemik.</strong></li>
+                <li><strong>Stroke embolik kardiogenik</strong> biasanya lebih besar dan lebih parah dibanding stroke dari penyumbatan di tempat lain.</li>
+                <li><strong>Pencegahan:</strong> Pasien FA harus minum obat pengencer darah (antikoagulan seperti warfarin atau DOAC) untuk mencegah pembentukan gumpalan.</li>
+            </ul>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Bayangkan jantung itu seperti <strong>mesin pompa air</strong>. Kalau mesinnya berputar tidak teratur, air di dalam tangki bisa menggumpal dan membentuk gumpalan lumpur. Gumpalan lumpur ini kemudian terbawa aliran air ke pipa-pipa rumah (otak) dan menyumbat pipa. Hasilnya? Air tidak mengalir ke rumah tersebut → stroke!</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"FA = Fibrilasi Atrium = Emboli ke Otak"</strong> — Setiap pasien stroke, selalu periksa nadi! Kalau tidak teratur, curiga FA. Pasien FA butuh antikoagulan seumur hidup untuk mencegah stroke berulang.</p>
+        </div>
+    </div>
+
+    <!-- SOAL 34 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 34</span>
+        <div class="q-text">Seseorang tidak sengaja kena lemparan benda keras ke kepala. Setelah itu dia mengalami kelamahan dan penurunan kesadaran. Tekanan darahnya 170 mmHg. Diagnosisnya?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Lesi Desak Ruang (Space Occupying Lesion / SOL)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p>Setelah trauma kepala, bisa terjadi <strong>perdarahan di dalam tengkorak</strong> (hematoma epidural, subdural, atau intraserebral). Darah yang terkumpul di dalam tengkorak (ruang tertutup) akan <strong>mendesak otak</strong> ke bawah → peningkatan tekanan intrakranial (TIK).</p>
+            <ul>
+                <li><strong>Tanda bahaya (Cushing Triad):</strong>
+                    <ul>
+                        <li>Hipertensi (TD tinggi, di sini 170) — tubuh mencoba memaksa darah masuk ke otak</li>
+                        <li>Bradikardia (denyut jantung lambat) — respons reflek</li>
+                        <li>Irregularitas pernapasan — otak batang mulai tertekan</li>
+                    </ul>
+                </li>
+                <li><strong>Kenapa TD tinggi?</strong> Bukan karena pasien hipertensi kronis, tapi karena tubuh berusaha keras menjaga agar darah tetap masuk ke otak meski tekanan di dalam kepala sudah tinggi.</li>
+            </ul>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Bayangkan tengkorak itu seperti <strong>kaleng sarden</strong>. Otaknya adalah sarden, dan darah yang keluar setelah trauma itu seperti <strong>air yang masuk ke kaleng</strong>. Kalau airnya makin banyak, sardennya akan terdesak dan hancur. Tekanan darah tinggi itu seperti <strong>pompa yang makin keras memompa air masuk</strong> meski kaleng sudah penuh — hasilnya kaleng bisa meledak (hernia otak).</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"Trauma + Koma + TD Tinggi = TIK/SOL = EMERGENCY!"</strong> — Ini adalah kondisi gawat darurat! Segera CT scan dan panggil dokter bedah saraf. Jangan tunggu!</p>
+        </div>
+    </div>
+</div>
+
+<!-- EPILEPSI -->
+<div id="epilepsi" class="section">
+    <h2 class="section-title">⚡ Epilepsi: Ketika Otak Korsleting</h2>
+
+    <div class="section-intro">
+        <strong>Apa itu Epilepsi?</strong> Epilepsi adalah kondisi di mana otak mengalami <span class="highlight">aktivitas listrik yang abnormal dan berlebihan</span>. Bayangkan otak itu seperti kota besar dengan jutaan kabel listrik. Kalau ada kabel yang konslet, listriknya akan menyamber ke mana-mana tidak terkontrol → itulah kejang.
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">📋</span>
+            <span class="card-title">Klasifikasi Kejang (ILAE 2017)</span>
+        </div>
+        <div class="card-body">
+            <p>Klasifikasi kejang dibagi berdasarkan <strong>dimulai dari mana</strong> korsletingnya:</p>
+            <ul>
+                <li><strong>Fokal Onset:</strong> Korsleting dimulai dari <strong>satu area otak</strong> saja. Bisa tetap di situ, atau menyebar ke seluruh otak.
+                    <br>→ Contoh: Kejang hanya tangan kiri bergetar, atau mulut mengunyah-munyak sendiri.</li>
+                <li><strong>Generalized Onset:</strong> Korsleting langsung dari <strong>seluruh otak</strong> sejak awal.
+                    <br>→ Contoh: Kejang tonik-klonik (kejang besar), absence (ngelamun sekejap), myoclonic (jetakan).</li>
+                <li><strong>Unknown Onset:</strong> Tidak tahu dimulai dari mana karena tidak ada saksi/EEG.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🚨</span>
+            <span class="card-title">Status Epileptikus (Emergency!)</span>
+        </div>
+        <div class="card-body">
+            <p><strong>Status Epileptikus (SE)</strong> adalah keadaan DARURAT di mana kejang tidak berhenti-berhenti. Ini seperti <strong>api yang terus menyala</strong> dan membakar rumah — kalau tidak segera dipadamkan, rumahnya (otak) akan hancur total.</p>
+            <ul>
+                <li><strong>Definisi:</strong> Kejang berlangsung >5 menit ATAU kejang berulang tanpa sadar penuh di antaranya.</li>
+                <li><strong>Kenapa 5 menit?</strong> Setelah 5 menit, otak mulai kehabisan energi dan bisa rusak permanen.</li>
+                <li><strong>Mortalitas:</strong> 20% — sangat berbahaya!</li>
+            </ul>
+            <p><strong>Algoritma Penanganan SE:</strong></p>
+            <div class="step-box">
+                <span class="step-num">1</span>
+                <span class="step-title">0-5 menit: Stabilisasi</span>
+                <p>Pastikan jalan napas lancar, kasih oksigen, cek gula darah. Jangan masukkan apa-apa ke mulut!</p>
+            </div>
+            <div class="step-box">
+                <span class="step-num">2</span>
+                <span class="step-title">5-20 menit: Obat Lini Pertama (Lorazepam)</span>
+                <p>Lorazepam IV 0,1 mg/kg (maksimal 4 mg). Ini obat penenang yang bekerja cepat (2-5 menit).</p>
+            </div>
+            <div class="step-box">
+                <span class="step-num">3</span>
+                <span class="step-title">20-40 menit: Obat Lini Kedua (Fosphenytoin/Valproat)</span>
+                <p>Kalau lorazepam tidak berhasil, berikan obat anti-kejang jangka panjang.</p>
+            </div>
+            <div class="step-box">
+                <span class="step-num">4</span>
+                <span class="step-title">40-60 menit: Refrakter (Midazolam infus)</span>
+                <p>Kejang masih berlanjut = refrakter. Butuh obat penenang kuat via infus.</p>
+            </div>
+            <div class="step-box">
+                <span class="step-num">5</span>
+                <span class="step-title">>60 menit: Super-Refrakter (Anestesi umum)</span>
+                <p>Kejang >1 jam = super-refrakter. Pasien harus dibius total (koma medis) untuk melindungi otak.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mnemonic-box">
+        <div class="mnemonic-title">⚡ Mnemonik: Algoritma Status Epileptikus</div>
+        <div class="mnemonic-text">
+            <span class="mnemonic-big">"5-20-40-60 Menit = L-F-M-P"</span>
+            <p><strong>5-20 menit:</strong> <strong>L</strong>orazepam (Lini 1)<br>
+            <strong>20-40 menit:</strong> <strong>F</strong>osphenytoin (Lini 2)<br>
+            <strong>40-60 menit:</strong> <strong>M</strong>idazolam (Refrakter)<br>
+            <strong>>60 menit:</strong> <strong>P</strong>ropofol (Super-refrakter)</p>
+            <p>🧠 <strong>Ingat: "Lamanya Lima-Forty-Midazolam-Propofol"</strong></p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="color:var(--primary); margin-bottom:1.5rem;">📋 Pembahasan Soal-soal Epilepsi</h2>
+
+    <!-- SOAL 15 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 15</span>
+        <div class="q-text">Pasien mengalami kejang yang melibatkan SEMUA anggota gerak (tangan dan kaki kiri-kanan semua bergerak tidak terkontrol). Menurut klasifikasi ILAE 2017, kejang ini disebut?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Generalized Motor Seizure (Tonic-Clonic)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p>Kata kunci di sini adalah <strong>"SEMUA anggota gerak"</strong>. Ini artinya korsleting listrik di otak melibatkan <strong>kedua belah hemisfer otak sejak awal</strong>, bukan cuma satu sisi.</p>
+            <ul>
+                <li><strong>Generalized = Seluruh otak</strong> terlibat sejak awal.</li>
+                <li><strong>Motor = Ada gerakan otot</strong> (kejang, jetakan, kekakuan).</li>
+                <li><strong>Tonic-Clonic = Tipe gerakannya:</strong> Fase tonik (kekakuan seluruh tubuh, bisa berteriak, 10-20 detik) diikuti fase klonik (jetakan ritmik, 1-2 menit).</li>
+            </ul>
+            <p><strong>Bedakan dengan Fokal:</strong> Kalau cuma satu tangan atau satu kaki yang kejang = Fokal. Kalau semua anggota gerak = Generalized.</p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Bayangkan otak itu seperti <strong>gedung perkantoran</strong>. Kejang fokal itu seperti <strong>api yang mulai dari satu ruangan</strong> saja — cuma ruangan A yang panas. Kejang generalized itu seperti <strong>alarm kebakaran yang langsung bunyi di seluruh lantai</strong> — semua ruangan langsung panas sejak awal. Karena semua anggota gerak kena = generalized!</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"SEMUA GERAK = GENERAL"</strong> — Kalau soal bilang "semua anggota gerak", jawabannya pasti generalized. Kalau "hanya satu sisi/area" = fokal. Ini aturan dasar yang tidak boleh salah!</p>
+        </div>
+    </div>
+
+    <!-- SOAL 21 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 21</span>
+        <div class="q-text">Pasien mengalami kejang dimulai dengan kekakuan otot, kemudian dilanjutkan dengan jetakan-jetakan dan melepas barang yang dipegang di tangan. Diagnosis?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Myoclonic Seizure</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p>Mari bedah soal ini kata per kata:</p>
+            <ul>
+                <li><strong>"Kekakuan otot terus"</strong> → Ini bisa tonik, tapi...</li>
+                <li><strong>"Dilanjutkan dengan kelonjotan"</strong> → Ada fase klonik/jetakan</li>
+                <li><strong>"MELEPAS barang yang dipegang"</strong> → Ini kata kunci! Barang jatuh dari tangan karena jetakan singkat.</li>
+            </ul>
+            <p><strong>Myoclonic seizure</strong> adalah kejang berupa <strong>jetakan singkat, cepat, dan shock-like</strong> pada otot. Bisa pada kedua tangan, sehingga barang yang dipegang jatuh. Biasanya terjadi di pagi hari setelah bangun tidur.</p>
+            <p><strong>Bedakan dengan Tonic-Clonic:</strong></p>
+            <ul>
+                <li><strong>Tonic-Clonic:</strong> Kehilangan kesadaran TOTAL, jatuh, fase tonik lama (kekakuan) → klonik (jetakan ritmik) → pasca-iktal (tidur/ngantuk).</li>
+                <li><strong>Myoclonic:</strong> Jetakan singkat, biasanya sadar, tidak jatuh (kecuali jetakannya kuat), tidak ada fase pasca-iktal.</li>
+            </ul>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Myoclonic itu seperti <strong>"kaget listrik"</strong> — kamu menyentuh colokan yang bocor, tanganmu langsung "jreng" sekejap dan melepas apa yang kamu pegang. Cuma sekejap, tapi cukup untuk menjatuhkan gelas dari tangan. Tonic-clonic itu seperti <strong>"terkena sengatan listrik besar"</strong> — tubuh kaku, kemudian goyang-goyang hebat, dan akhirnya pingsan.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"MYO = MELEPAS (Myo-clonus = Melepas barang)"</strong> — Kalau ada kata "melepas barang" atau "benda jatuh" di soal, jawabannya Myoclonic. Tonic-clonic = "pingsan + kejang besar", tidak sadar sama sekali.</p>
+        </div>
+    </div>
+
+    <!-- SOAL 28 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 28</span>
+        <div class="q-text">Seorang anak mengalami kejang berulang. Dokter ingin mengetahui apakah anak ini menderita epilepsi atau bukan. Pemeriksaan penunjang yang paling tepat adalah?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: EEG (Elektroensefalografi)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>EEG (Elektroensefalografi)</strong> adalah alat yang merekam <strong>aktivitas listrik otak</strong> melalui elektroda yang ditempelkan di kulit kepala. Ini seperti <strong>ECG untuk otak</strong> — ECG merekam listrik jantung, EEG merekam listrik otak.</p>
+            <ul>
+                <li><strong>EEG bisa mendeteksi:</strong> Gelombang abnormal (spike, sharp wave, spike-wave) yang menandakan ada area otak yang "konslet".</li>
+                <li><strong>EEG tidak bisa:</strong> Melihat struktur otak (untuk itu butuh CT/MRI).</li>
+                <li><strong>EMG (Elektromiografi)</strong> adalah alat untuk merekam aktivitas listrik OTOT, bukan otak. EMG digunakan untuk diagnosis myasthenia gravis, neuropati, atau penyakit otot.</li>
+            </ul>
+            <p><strong>Kombinasi ideal untuk diagnosis epilepsi:</strong> EEG + MRI otak. EEG untuk melihat aktivitas listrik abnormal, MRI untuk melihat apakah ada lesi struktural (tumor, malformasi, dll) yang menyebabkan kejang.</p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>EEG itu seperti <strong>"alat pendeteksi petir"</strong> — dia bisa mendeteksi ada badai listrik (kejang) di otak. EMG itu seperti <strong>"alat pendeteksi kerusakan kabel di rumah"</strong> — dia cek kabel dari meteran ke stop kontak (saraf ke otot), bukan meteran utamanya (otak).</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"EEG = Epi-Epi-Graf = Epilepsi Grafik"</strong> — EEG untuk Epilepsi. EMG untuk otot (M = Muscle). Jangan tertukar! Ingat: "EEG = Otak, EMG = Otot"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 10 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 10 (Trapezius)</span>
+        <div class="q-text">Anak usia 4 tahun mengalami kejang selama 20 menit dan tidak sadar. Dibawa ke RS, tapi sampai di RS kejang lagi selama 5 menit dan masih tidak sadar. Diagnosis?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Status Epileptikus</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p>Mari hitung bersama:</p>
+            <ul>
+                <li>Kejang <strong>pertama 20 menit</strong> → sudah >5 menit = Status Epileptikus</li>
+                <li>Pasien <strong>tidak sadar</strong> antara kejang pertama dan kedua</li>
+                <li>Kejang <strong>kedua 5 menit</strong> → kejang berulang tanpa recovery penuh</li>
+            </ul>
+            <p><strong>Definisi Status Epileptikus menurut ILAE 2015:</strong></p>
+            <ol>
+                <li>Kejang berlangsung >5 menit, ATAU</li>
+                <li>Kejang berulang tanpa pemulihan kesadaran penuh di antara episode</li>
+            </ol>
+            <p>Pasien ini memenuhi <strong>KEDUA kriteria</strong>! Kejang 20 menit (>5 menit) dan kejang lagi tanpa sadar penuh di antaranya.</p>
+            <p><span class="highlight-red">Status Epileptikus adalah EMERGENCY! Setiap menit yang tidak tertangani = kehilangan 2 tahun kehidupan neuron.</span></p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Status Epileptikus itu seperti <strong>"mesin mobil yang terus menyala dan tidak bisa dimatikan"</strong>. Mesinnya panas terus, bensin habis, dan akhirnya mesinnya rusak total (otak rusak). Kamu harus segera cabut kunci kontak (berikan lorazepam) untuk mematikan mesin!</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"5 MENIT = STATUS"</strong> — Jangan tunggu 30 menit! Definisi SE sudah berubah dari >30 menit menjadi >5 menit. Kenapa? Karena setelah 5 menit, otak mulai rusak. Segera berikan lorazepam!</p>
+        </div>
+    </div>
+
+    <!-- SOAL 16 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 16 (Trapezius)</span>
+        <div class="q-text">Pasien mengalami kejang dengan sentakan (jetakan) pada kedua tangan dan kaki. Saat kejang, benda yang dipegang di tangan jatuh ke lantai. Diagnosis?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Myoclonic Seizure</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p>Sama dengan soal 21 di atas, tapi mari bedah pilihan jawabannya:</p>
+            <ul>
+                <li><strong>A. Myoclonus:</strong> Jetakan singkat, simetris, benda jatuh. ✅ Benar!</li>
+                <li><strong>B. Absence seizure:</strong> Ngelamun sekejap (5-15 detik), mata berkedip, TETAPI tidak jatuh dan tidak melepas benda. ❌ Salah!</li>
+                <li><strong>C. Tonic-clonic:</strong> Kehilangan kesadaran total, jatuh, fase tonik lama. ❌ Salah!</li>
+                <li><strong>D. Focal simple:</strong> Kejang hanya satu area, kesadaran utuh. ❌ Salah!</li>
+                <li><strong>E. Focal complex:</strong> Kejang satu area tapi kesadaran terganggu. ❌ Salah!</li>
+            </ul>
+            <p><strong>Kata kunci:</strong> "Sentakan pada kedua ekstremitas" (simetris, generalized) + "benda jatuh" (jetakan singkat) = Myoclonic.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"MYO = JATUHIN BARANG"</strong> — Myoclonic = jetakan singkat → barang jatuh. Absence = "ngelamun" tapi tidak jatuh. Tonic-klonik = "pingsan + kejang besar". Tiga ini sering keluar di soal, hafalkan bedanya!</p>
+        </div>
+    </div>
+</div>
+
+<!-- VERTIGO -->
+<div id="vertigo" class="section">
+    <h2 class="section-title">🌀 Vertigo: Dunia Berputar</h2>
+
+    <div class="section-intro">
+        <strong>Apa itu Vertigo?</strong> Vertigo adalah sensasi di mana kamu merasa <span class="highlight">dunia di sekitarmu berputar</span> atau kamu yang berputar padahal diam. Bayangkan kamu di atas komidi putar yang berputar sangat cepat, lalu turun — sensasi "mabuk" itulah vertigo. Vertigo bisa berasal dari <strong>telinga dalam</strong> (perifer) atau <strong>otak</strong> (sentral).
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🔍</span>
+            <span class="card-title">Vertigo Perifer vs Sentral</span>
+        </div>
+        <div class="card-body">
+            <p>Ini adalah salah satu pembelajaran PALING PENTING di neurologi. Kamu HARUS bisa membedakan keduanya karena <span class="highlight-red">vertigo sentral bisa jadi stroke!</span></p>
+
+            <div class="compare-grid">
+                <div class="compare-box compare-left">
+                    <div class="compare-title">🌀 Vertigo PERIFER (Telinga Dalam)</div>
+                    <ul>
+                        <li>Onset: <strong>Mendadak dan parah</strong></li>
+                        <li>Durasi: <strong>Beberapa detik-menit</strong> (BPPV) atau <strong>hari-hari</strong> (neuritis)</li>
+                        <li>Nistagmus: <strong>Satu arah</strong>, bisa dihilangkan dengan fiksasi mata</li>
+                        <li>Muntah: <strong>Sangat parah</strong></li>
+                        <li>Gangguan pendengaran: <strong>Bisa ada</strong> (tuli, tinitus)</li>
+                        <li>Tanda neurologis lain: <strong>TIDAK ADA</strong></li>
+                        <li>Head Impulse Test: <strong>Positif</strong></li>
+                    </ul>
+                </div>
+                <div class="compare-box compare-right">
+                    <div class="compare-title">🧠 Vertigo SENTRAL (Otak)</div>
+                    <ul>
+                        <li>Onset: <strong>Gradual</strong></li>
+                        <li>Durasi: <strong>Kontinu dan berhari-hari</strong></li>
+                        <li>Nistagmus: <strong>Banyak arah</strong>, tidak bisa dihilangkan</li>
+                        <li>Muntah: <strong>Sedang-moderat</strong></li>
+                        <li>Gangguan pendengaran: <strong>Jarang</strong></li>
+                        <li>Tanda neurologis lain: <strong>ADA!</strong> (diplopia, disartria, lemah)</li>
+                        <li>Head Impulse Test: <strong>Negatif</strong> → BERBAHAYA!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p><span class="highlight-red">⚠️ PENTING: Kalau vertigo disertai dengan lemah anggota badan, bicara pelo, atau penglihatan ganda → curiga STROKE posterior!</span></p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🎯</span>
+            <span class="card-title">BPPV (Vertigo Posisi)</span>
+        </div>
+        <div class="card-body">
+            <p><strong>BPPV (Benign Paroxysmal Positional Vertigo)</strong> adalah tipe vertigo yang paling umum. "Benign" artinya tidak berbahaya, "Paroxysmal" artinya datang tiba-tiba, "Positional" artinya dipicu oleh posisi tertentu.</p>
+            <ul>
+                <li><strong>Penyebab:</strong> Butiran kalsium (otoconia) lepas dari tempatnya di telinga dalam dan masuk ke saluran setengah lingkaran (canal).</li>
+                <li><strong>Trigger:</strong> Berbaring, bangun tidur, menengok ke atas, memutar kepala.</li>
+                <li><strong>Durasi:</strong> Sangat singkat — <strong>beberapa detik sampai 1 menit</strong>.</li>
+                <li><strong>Tes:</strong> Dix-Hallpike → nistagmus torsi-geotropik (berputar ke bawah).</li>
+                <li><strong>Terapi:</strong> Epley maneuver (manuver reposisi) → sukses 80-90%!</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mnemonic-box">
+        <div class="mnemonic-title">🧠 Mnemonik: Bedah Vertigo Perifer vs Sentral</div>
+        <div class="mnemonic-text">
+            <span class="mnemonic-big">"PERIFER = UUIISS"</span>
+            <p><strong>U</strong>nidirectional (satu arah) | <strong>U</strong>nilateral | <strong>I</strong>ntensitas sangat berat | <strong>I</strong>nhibisi fiksasi | <strong>S</strong>ensorineural deafness | <strong>S</strong>udden onset</p>
+            <span class="mnemonic-big">"SENTRAL = MMDDSS"</span>
+            <p><strong>M</strong>ultidirectional (banyak arah) | <strong>M</strong>oderat | <strong>D</strong>urasi lama | <strong>D</strong>iplopia/disartria | <strong>S</strong>entral signs | <strong>S</strong>kew (+)</p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="color:var(--primary); margin-bottom:1.5rem;">📋 Pembahasan Soal-soal Vertigo</h2>
+
+    <!-- SOAL 7 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 7</span>
+        <div class="q-text">Pasien dengan gangguan keseimbangan. Saat diperiksa dengan tes Romberg, pasien goyang hanya saat menutup mata. Diagnosis arahnya ke?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Vertigo Vestibular Perifer / Gangguan Propriosepsi</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Tes Romberg</strong> adalah tes sederhana untuk memeriksa keseimbangan:</p>
+            <ol>
+                <li>Pasien berdiri tegak dengan kaki rapat</li>
+                <li>Mata TERBUKA → perhatikan apakah goyang</li>
+                <li>Mata TERTUTUP → perhatikan apakah makin goyang</li>
+            </ol>
+            <p><strong>Interpretasi:</strong></p>
+            <ul>
+                <li><strong>Romberg NEGATIF (tidak goyang sama sekali):</strong> Normal atau serebellar ataxia (serebelum tidak bergantung pada penglihatan untuk keseimbangan).</li>
+                <li><strong>Romberg POSITIF (goyang saat menutup mata):</strong> Gangguan propriosepsi (dorsal column) atau vestibular perifer. Pasien menggunakan penglihatan untuk kompensasi. Saat mata ditutup, kompensasi hilang → goyang.</li>
+                <li><strong>Goyang saat mata terbuka DAN tertutup:</strong> Serebellar ataxia.</li>
+            </ul>
+            <p><strong>Propriosepsi</strong> adalah kemampuan tubuh untuk "merasakan" posisi anggota gerak tanpa melihat. Kalau propriosepsi rusak (misalnya karena defisiensi vitamin B12, neuropati, atau tabes dorsalis), pasien butuh melihat kakinya untuk berjalan.</p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Romberg test itu seperti <strong>"berjalan di atas tali dengan mata terbuka vs tertutup"</strong>. Kalau kamu bisa jalan dengan mata terbuka tapi jatuh saat ditutup = masalahnya bukan di keseimbangan otak, tapi di "sensor kaki" (propriosepsi) yang tidak berfungsi. Kamu butuh MELIHAT kaki untuk tahu posisinya.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"ROMBERG TUTUP = PERIFER/SENSORY"</strong> — Kalau hanya goyah saat mata ditutup = perifer atau sensory. Kalau goyah terus meski mata buka = serebelum. "Tutup mata = hilang kompensasi visual = propriosepsi terbongkar"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 20 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 20</span>
+        <div class="q-text">Pasien mengeluh vertigo (dunia berputar). Vertigo ini makin parah saat dia berbaring miring ke sebelah kiri. Saat diputar ke kiri, vertigonya sangat berat. Diagnosis?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: BPPV (Benign Paroxysmal Positional Vertigo)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Kata kunci dari soal ini:</strong></p>
+            <ul>
+                <li><strong>"Berputar kepala tidur sebelah kiri lebih berat"</strong> → Vertigo DIPICU oleh posisi tertentu</li>
+                <li><strong>"Lebih berat"</strong> → Paroksimal (muncul tiba-tiba saat posisi berubah)</li>
+            </ul>
+            <p><strong>Ciri khas BPPV:</strong></p>
+            <ol>
+                <li>Vertigo sangat singkat (beberapa detik - 1 menit)</li>
+                <li>Dipicu oleh perubahan posisi kepala (berbaring, bangun, menengok)</li>
+                <li>Nistagmus ada latensi (muncul 2-20 detik setelah posisi berubah)</li>
+                <li>Nistagmus fatigable (melemah kalau tes diulang)</li>
+                <li>Tidak ada gangguan pendengaran</li>
+            </ol>
+            <p><strong>Bedakan dengan Meniere:</strong> Meniere = vertigo 20 menit - 12 jam + tuli + tinitus (bunyi di telinga). BPPV = vertigo singkat + tidak ada gangguan pendengaran.</p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>BPPV itu seperti <strong>"bola kristal di dalam gelas yang tertumpah"</strong>. Biasanya bola-bola kecil (otoconia) ada di tempatnya di telinga dalam. Kalau ada beberapa bola yang jatuh ke saluran setengah lingkaran, saat kamu mengubah posisi kepala, bola-bola itu berguling dan mengganggu sensor keseimbangan → vertigo singkat. Epley maneuver itu seperti <strong>"menggoyangkan gelas perlahan untuk mengembalikan bola ke tempatnya"</strong>.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"BPPV = BERPUTAR POSISI = PAROKSIMAL = SINGKAT"</strong> — Kalau soal bilang vertigo dipicu posisi dan berlangsung singkat = BPPV. Kalau vertigo lama + tuli + tinitus = Meniere. Jangan tertukar!</p>
+        </div>
+    </div>
+
+    <!-- SOAL 29 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 29</span>
+        <div class="q-text">Tes Romberg dilakukan pada pasien vertigo. Hasilnya: pasien goyang hanya saat mata tertutup. Saat mata terbuka, pasien stabil. Diagnosis?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Vertigo Perifer / Vestibularis Perifer</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p>Interpretasi Romberg pada vertigo:</p>
+            <ul>
+                <li><strong>Hanya goyang saat mata tertutup:</strong> Vestibularis perifer atau gangguan propriosepsi. Pasien menggunakan penglihatan untuk menutupi masalah keseimbangan inner ear-nya.</li>
+                <li><strong>Goyang saat mata terbuka DAN tertutup:</strong> Vestibularis sentral atau serebellar ataxia. Masalahnya di otak, jadi tidak ada kompensasi visual yang bisa membantu.</li>
+            </ul>
+            <p><strong>Catatan:</strong> Romberg test sebenarnya lebih spesifik untuk propriosepsi (dorsal column), tapi dalam konteks vertigo, hasil positif saat menutup mata bisa mengarah ke vestibular perifer karena pasien kehilangan 2 dari 3 input keseimbangan (vestibular + visual). Yang tersisa hanya propriosepsi, dan kalau propriosepsi juga bermasalah = jatuh.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"ROMBERG TUTUP = PERIFER, ROMBERG TERUS = SENTRAL"</strong> — Hanya goyah saat tutup = perifer (masih bisa dikompensasi visual). Goyah terus = sentral (otak bermasalah, tidak bisa dikompensasi).</p>
+        </div>
+    </div>
+
+    <!-- SOAL 36 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 36</span>
+        <div class="q-text">Pasien didiagnosis BPPV. Obat yang digunakan untuk terapi?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Betahistin</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Betahistin</strong> adalah obat yang sering digunakan untuk vertigo perifer, termasuk BPPV dan Meniere disease.</p>
+            <ul>
+                <li><strong>Mekanisme:</strong> Betahistin adalah analog histamin yang bekerja di telinga dalam. Dia meningkatkan aliran darah ke labyrinth (organ keseimbangan) dan meningkatkan kompensasi vestibular.</li>
+                <li><strong>Dosis:</strong> 8-16 mg, 3 kali sehari.</li>
+                <li><strong>Efek samping:</strong> Mual, sakit perut, sakit kepala (jarang).</li>
+            </ul>
+            <p><strong>Tapi ingat:</strong> Obat BPPV yang PALING efektif bukan betahistin, melainkan <strong>Epley maneuver</strong> (manuver reposisi kanalith). Betahistin hanya untuk meredakan gejala sementara.</p>
+            <p><strong>Obat lain untuk vertigo:</strong></p>
+            <ul>
+                <li>Antihistamin: Promethazine, Dimenhydrinate (untuk mual dan vertigo akut)</li>
+                <li>Benzodiazepin: Diazepam (untuk anxiety dan vertigo akut)</li>
+                <li>Antikolinergik: Scopolamine (patch di belakang telinga)</li>
+            </ul>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"BETA = BPPV + MENIERE"</strong> — Betahistin untuk vertigo perifer. Tapi ingat: Epley maneuver adalah terapi definitif BPPV, betahistin hanya bantu-bantu. Jangan berikan betahistin untuk vertigo sentral (stroke) karena bisa menutupi diagnosis!</p>
+        </div>
+    </div>
+</div>
+
+<!-- INFEKSI SSP -->
+<div id="infeksi" class="section">
+    <h2 class="section-title">🦠 Infeksi Sistem Saraf Pusat</h2>
+
+    <div class="section-intro">
+        <strong>Apa itu Infeksi SSP?</strong> Infeksi SSP adalah kondisi di mana kuman (bakteri, virus, jamur) masuk ke dalam sistem saraf pusat (otak dan sumsum tulang belakang). Bayangkan SSP itu seperti <span class="highlight">istana yang dikelilingi tembok tinggi (sistem imun + sawar darah-otak)</span>. Kalau ada musuh yang berhasil masuk ke istana, bisa terjadi kekacauan besar!
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">💉</span>
+            <span class="card-title">Lumbar Puncture (Suntikan Punggung)</span>
+        </div>
+        <div class="card-body">
+            <p><strong>Lumbar Puncture (LP)</strong> adalah prosedur mengambil cairan otak (CSF/LCS) dari ruang di sekitar sumsum tulang belakang. Ini seperti <strong>"mengambil sampel air dari sungai untuk diperiksa apakah airnya bersih atau kotor"</strong>.</p>
+            <ul>
+                <li><strong>Indikasi:</strong> Meningitis, encephalitis, SAH (subarachnoid hemorrhage), demielinisasi (MS).</li>
+                <li><strong>Kontraindikasi MUTLAK:</strong>
+                    <ul>
+                        <li><span class="highlight-red">Impendesi hernia otak</span> (otak mau keluar dari tengkorak!) → LP bisa memicu herniasi dan kematian!</li>
+                        <li>Lesion fokal dengan mass effect (tumor besar, hematoma)</li>
+                        <li>Koagulopati berat (trombosit <50.000, INR >1,4)</li>
+                        <li>Infeksi kulit di tempat tusuk</li>
+                    </ul>
+                </li>
+                <li><strong>Hasil yang diperiksa:</strong> Warna, tekanan, sel, protein, glukosa, Gram stain, kultur, PCR.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🧪</span>
+            <span class="card-title">Cairan Otak (CSF/LCS) Normal vs Abnormal</span>
+        </div>
+        <div class="card-body">
+            <p>Cairan otak yang normal itu seperti <strong>air mineral bening</strong>. Kalau ada infeksi, warnanya bisa berubah:</p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kondisi</th>
+                            <th>Warna</th>
+                            <th>Sel</th>
+                            <th>Protein</th>
+                            <th>Glukosa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Normal</strong></td>
+                            <td>Bening</td>
+                            <td>0-5 sel</td>
+                            <td>15-45 mg/dL</td>
+                            <td>60-70% darah</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Meningitis Bakteri</strong></td>
+                            <td>Keruh/putih</td>
+                            <td>PMN (netrofil) >1000</td>
+                            <td>Tinggi</td>
+                            <td>Rendah</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Meningitis Viral</strong></td>
+                            <td>Bening/sedikit keruh</td>
+                            <td>Limfosit <500</td>
+                            <td>Sedikit tinggi</td>
+                            <td>Normal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Meningitis TB</strong></td>
+                            <td><span class="highlight">Xantochromic/kuning</span></td>
+                            <td>Limfosit tinggi</td>
+                            <td><span class="highlight-red">Sangat tinggi (>1000)</span></td>
+                            <td><span class="highlight-red">Sangat rendah</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>SAH</strong></td>
+                            <td><span class="highlight">Merah/xantochromic</span></td>
+                            <td>RBC banyak</td>
+                            <td>Tinggi</td>
+                            <td>Normal</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p><span class="highlight">Meningitis TB sangat khas:</span> Cairan kuning/xantochromic, protein sangat tinggi (bisa membentuk "spiderweb clot" kalau didiamkan), glukosa sangat rendah.</p>
+        </div>
+    </div>
+
+    <div class="mnemonic-box">
+        <div class="mnemonic-title">🧠 Mnemonik: Pola Cairan Otak</div>
+        <div class="mnemonic-text">
+            <span class="mnemonic-big">"Bakteri PMN, Virus Limfo, TB Kuning"</span>
+            <p><strong>Bakteri:</strong> PMN (netrofil) banyak, glukosa rendah, protein tinggi<br>
+            <strong>Viral:</strong> Limfosit, glukosa normal, protein sedikit naik<br>
+            <strong>TB:</strong> Limfosit, glukosa sangat rendah, protein sangat tinggi, <span class="highlight">kuning!</span></p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="color:var(--primary); margin-bottom:1.5rem;">📋 Pembahasan Soal-soal Infeksi SSP</h2>
+
+    <!-- SOAL 1 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 1</span>
+        <div class="q-text">Dokter ingin melakukan Lumbar Puncture (pungsi lumbal) pada pasien dengan suspicion meningitis. Apa yang merupakan kontraindikasi MUTLAK untuk melakukan LP?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Impendesi Hernia Otak</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Impendesi hernia otak</strong> adalah kondisi di mana tekanan di dalam tengkorak sangat tinggi sehingga otak mulai "terdesak" keluar dari tempatnya. Ini seperti <strong>kaleng sarden yang terlalu penuh dan isinya mau keluar</strong>.</p>
+            <ul>
+                <li><strong>Kenapa LP berbahaya?</strong> Saat LP dilakukan, cairan otak dikeluarkan dari bagian bawah (spinal). Ini membuat tekanan di bagian bawah menurun, sementara tekanan di bagian atas (otak) masih tinggi. Perbedaan tekanan ini bisa membuat otak "terjun" ke bawah (herniation) → tonsil serebellar masuk ke foramen magnum → menekan batang otak → kematian!</li>
+                <li><strong>Tanda impendesi hernia:</strong> Papil edema (bengkak di belakang mata), defisit fokal (lemah/kebas), GCS menurun, perubahan pupil (tidak sama besar).</li>
+            </ul>
+            <p><strong>Protokol yang benar:</strong> Kalau ada tanda ↑ TIK → CT scan kepala DULU → kalau CT aman → baru LP.</p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>LP pada hernia otak itu seperti <strong>"membuka katup di bagian bawah tangki air yang sudah penuh dan mau meledak"</strong>. Air di bagian atas (otak) akan mendorong dengan sangat kuat ke bawah, dan bisa merusak seluruh sistem. Jangan pernah buka katup bawah kalau tekanan atas sudah terlalu tinggi!</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"HERNIA = HENTIKAN LP"</strong> — Kalau ada tanda ↑ TIK (papil edema, defisit fokal, GCS turun) → CT dulu sebelum LP! Jangan pernah LP tanpa CT kalau ada suspicion herniation. Ini bisa membunuh pasien!</p>
+        </div>
+    </div>
+
+    <!-- SOAL 4 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 4</span>
+        <div class="q-text">Pasien dengan abses otak (kumpulan nanah di otak). Antibiotik empiris yang diberikan, KECUALI?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Ceftazidim (atau obat yang kurang tepat untuk coverage)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Abses otak</strong> adalah kumpulan nanah di dalam otak. Nanah ini terbentuk karena infeksi bakteri. Abses otak biasanya <strong>polimikrobial</strong> (banyak jenis bakteri), terutama:</p>
+            <ul>
+                <li><strong>Anaerob:</strong> Bacteroides, Prevotella → butuh <span class="highlight">Metronidazol</span></li>
+                <li><strong>Aerob Gram positif:</strong> Streptokokus, Staphylokokus → butuh <span class="highlight">Sefalosporin 3 (Ceftriakson/Cefotaxime) + Vankomisin</span></li>
+                <li><strong>Aerob Gram negatif:</strong> E.coli, Klebsiella, Pseudomonas → butuh <span class="highlight">Sefalosporin 3 atau Meropenem</span></li>
+            </ul>
+            <p><strong>Regimen standar abses otak:</strong> Metronidazol + Ceftriakson/Cefotaxime + Vankomisin</p>
+            <p>Ceftazidim sebenarnya juga bisa untuk Gram negatif (termasuk Pseudomonas), tapi mungkin yang dimaksud soal adalah obat yang tidak mencakup anaerob atau MRSA. Metronidazol dan vankomisin adalah kunci untuk abses otak.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"ABSES = MVSC"</strong> — <strong>M</strong>etronidazol + <strong>V</strong>ankomisin + <strong>S</strong>efalosporin 3 + <strong>C</strong>over anaerob. Abses = polymicrobial (anaerob + aerob + Staph).</p>
+        </div>
+    </div>
+
+    <!-- SOAL 6 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 6</span>
+        <div class="q-text">Dokter memberikan antibiotik empiris pada pasien dengan suspicion meningitis. Kapan terapi definitif (yang sesuai dengan hasil lab) dilakukan?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Setelah Hasil Kultur LCS Keluar</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p>Mari bedah perbedaan <strong>terapi empiris</strong> dan <strong>terapi definitif</strong>:</p>
+            <ul>
+                <li><strong>Terapi Empiris:</strong> Antibiotik yang diberikan <strong>SEGERA</strong> berdasarkan dugaan klinis, SEBELUM hasil laboratorium keluar. Ini seperti <strong>"memadamkan api dengan air sebelum tahu penyebab kebakaran"</strong>. Tujuannya: jangan tunggu, karena setiap jam delay meningkatkan mortalitas!</li>
+                <li><strong>Terapi Definitif:</strong> Antibiotik yang disesuaikan dengan hasil <strong>kultur dan uji sensitivitas</strong>. Ini seperti <strong>"menggunakan pemadam khusus setelah tahu bahan yang terbakar"</strong>.</li>
+            </ul>
+            <p><strong>Prinsip penting:</strong></p>
+            <ol>
+                <li>Berikan empiris SECEPATNYA (ideal <1 jam dari masuk RS)</li>
+                <li>Ambil darah dan LCS untuk kultur SEBELUM antibiotik (tapi jangan delay antibiotik untuk menunggu LP!)</li>
+                <li>Tunggu hasil kultur (2-3 hari)</li>
+                <li>Sesuaikan antibiotik berdasarkan hasil kultur = terapi definitif</li>
+            </ol>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Terapi empiris itu seperti <strong>"memakai payung saat hujan turun tanpa melihat forecast"</strong> — kamu tahu hujan, jaga-jaga pakai payung. Terapi definitif itu seperti <strong>"memakai jas hujan setelah tahu hujannya deras dan anginnya kencang"</strong> — kamu sudah tahu detail cuacanya, jadi bisa pilih perlengkapan yang tepat.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"EMPIRIS = SEKARANG, DEFINITIF = KULTUR KELUAR"</strong> — Jangan tunggu kultur untuk memulai empiris! Tapi definitive therapy harus menunggu kultur untuk menyesuaikan antibiotik yang tepat. Time is brain!</p>
+        </div>
+    </div>
+
+    <!-- SOAL 8 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 8 (Trapezius)</span>
+        <div class="q-text">Pasien dengan meningitis. Saat dilakukan LP, cairan otak yang keluar berwarna kuning kental (xantochromic). Diagnosis?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Meningitis TB (Tuberkulosis)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Cairan otak xantochromic (kuning)</strong> adalah tanda yang sangat khas untuk meningitis TB. Kenapa bisa kuning?</p>
+            <ul>
+                <li><strong>Protein sangat tinggi:</strong> Pada meningitis TB, protein bisa >1 g/dL (sangat tinggi!). Protein yang tinggi ini mengalami degenerasi dan memberikan warna kuning.</li>
+                <li><strong>Spiderweb clot:</strong> Kalau cairan TB didiamkan dalam tabung reaksi, akan terbentuk gumpalan seperti jaring laba-laba (spiderweb clot) karena protein yang sangat tinggi membeku.</li>
+                <li><strong>Glukosa sangat rendah:</strong> Bakteri TB memakan glukosa.</li>
+                <li><strong>Limfosit dominan:</strong> TB adalah infeksi kronis, jadi sel yang dominan adalah limfosit (bukan netrofil seperti bakteri akut).</li>
+            </ul>
+            <p><strong>Bedakan dengan warna cairan otak lain:</strong></p>
+            <ul>
+                <li><strong>Bening:</strong> Normal atau viral</li>
+                <li><strong>Keruh/putih:</strong> Bakteri akut (banyak netrofil)</li>
+                <li><strong>Merah:</strong> Perdarahan (SAH, trauma)</li>
+                <li><strong>Kuning/xantochromic:</strong> TB atau SAH lama (>12 jam)</li>
+            </ul>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Cairan otak pada meningitis TB itu seperti <strong>"sup ayam yang terlalu kental dan sudah didiamkan semalaman"</strong> — warnanya kuning, kental, dan kalau dibiarkan akan membentuk lapisan di atasnya (spiderweb clot). Normalnya cairan otak itu seperti <strong>air putih bening</strong>!</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"XANTO = TB"</strong> — LCS kuning/xantochromic = TB. Bakteri = keruh/putih. Viral = bening. "TB Kuning, Bakteri Putih, Virus Bening"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 45 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 45 (Trapezius)</span>
+        <div class="q-text">Wanita 54 tahun mengalami nyeri kepala sejak 3 minggu yang lalu, memberat, disertai demam selama 3 minggu juga. Beberapa kali muntah. Pasien makin sering mengantuk, meracau, dan akhirnya diam. Kesadaran menurun. Keterlaksanaan awal?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Memberikan Antibiotik Empiris dengan Diagnosis Presumtif</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p>Ini adalah kasus <strong>meningoencephalitis kronis</strong> yang sudah berlangsung 3 minggu. Gejalanya:</p>
+            <ul>
+                <li>Nyeri kepala kronis + demam = infeksi</li>
+                <li>Muntah = peningkatan tekanan intrakranial</li>
+                <li>Mengantuk → meracau → diam = penurunan kesadaran progresif</li>
+                <li>Kesadaran menurun = otak terkena (encephalitis)</li>
+            </ul>
+            <p><strong>Kemungkinan diagnosis:</strong> Meningitis TB atau infeksi kronis lainnya (fungal, kriptokokal).</p>
+            <p><strong>Langkah penanganan:</strong></p>
+            <ol>
+                <li><strong>CT scan kepala</strong> (menyingkirkan SOL/herniation sebelum LP)</li>
+                <li><strong>LP</strong> (kalau CT aman) untuk periksa cairan otak</li>
+                <li><strong>Antibiotik empiris SEGERA</strong> — jangan tunggu hasil!</li>
+            </ol>
+            <p><span class="highlight-red">Jangan berikan obat TB langsung (pilihan A) tanpa bukti TB!</span> TB membutuhkan konfirmasi. Tapi antibiotik empiris untuk bakteri bisa diberikan langsung sambil menunggu hasil LP.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"INFeksi = INI FIKS EMPIS"</strong> — Infeksi SSP = empiris segera! Jangan tunggu kultur untuk memulai terapi. Tapi jangan juga langsung kasih obat TB tanpa bukti. Empiris dulu, definitive setelah kultur.</p>
+        </div>
+    </div>
+</div>
+
+<!-- PARKINSON -->
+<div id="parkinson" class="section">
+    <h2 class="section-title">🎯 Parkinson: Ketika Otak Kehabisan "Bensin"</h2>
+
+    <div class="section-intro">
+        <strong>Apa itu Parkinson?</strong> Parkinson adalah penyakit di mana sel-sel di otak yang memproduksi <span class="highlight">dopamin (zat kimia penggerak)</span> mati secara perlahan. Dopamin itu seperti <strong>"bensin"</strong> untuk gerakan tubuh. Kalau bensinnya habis, tubuh jadi lambat, kaku, dan bergetar.
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🎯</span>
+            <span class="card-title">Tanda Kardinal Parkinson (TRAP)</span>
+        </div>
+        <div class="card-body">
+            <p>Untuk mendiagnosis Parkinson, minimal harus ada <strong>2 dari 4 tanda</strong> ini:</p>
+            <ul>
+                <li><strong>T - Tremor (Gemetar):</strong> Gemetar saat istirahat, biasanya di satu tangan. Frekuensi 4-6 kali per detik. Bentuknya seperti <strong>"menggulingkan pil"</strong> (pill-rolling). Gemetar membaik saat bergerak, memburuk saat stres.</li>
+                <li><strong>R - Rigiditas (Kaku):</strong> Kekakuan pada sendi saat digerakkan pasif. Ada 2 tipe:
+                    <ul>
+                        <li><strong>Lead-pipe:</strong> Kaku merata (seperti memegang pipa besi)</li>
+                        <li><strong>Cogwheel:</strong> Kaku dengan sentakan (seperti memutar roda gigi)</li>
+                    </ul>
+                </li>
+                <li><strong>A - Akinesia/Bradykinesia (Lambat):</strong> Gerakan lambat dan sedikit. Wajah seperti topeng (mask face), tulisan kecil (mikrografi), suara pelan (hipofoni), jalan cepat kecil (festinasi).</li>
+                <li><strong>P - Postural Instability (Goyah):</strong> Goyah saat berdiri/jalan. Ini muncul di <strong>stadium lanjut</strong> (Hoehn-Yahr 3+). Kalau muncul di awal = curiga bukan Parkinson!</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">📊</span>
+            <span class="card-title">Stadium Parkinson (Hoehn-Yahr)</span>
+        </div>
+        <div class="card-body">
+            <p>Stadium Parkinson menggambarkan seberapa parah penyakitnya:</p>
+            <div class="step-box">
+                <span class="step-num">1</span>
+                <span class="step-title">Stage 1: Hanya satu sisi tubuh</span>
+                <p>Tremor atau kaku hanya di tangan/kaki kiri ATAU kanan. Masih bisa beraktivitas normal.</p>
+            </div>
+            <div class="step-box">
+                <span class="step-num">2</span>
+                <span class="step-title">Stage 2: Kedua sisi tapi masih stabil</span>
+                <p>Tremor/kaku di kedua sisi, tapi masih bisa berjalan dan beraktivitas tanpa bantuan.</p>
+            </div>
+            <div class="step-box">
+                <span class="step-num">3</span>
+                <span class="step-title">Stage 3: Goyah tapi masih mandiri</span>
+                <p>Postural instability muncul. Pasien goyang saat berdiri, tapi masih bisa hidup mandiri.</p>
+            </div>
+            <div class="step-box">
+                <span class="step-num">4</span>
+                <span class="step-title">Stage 4: Butuh bantuan</span>
+                <p>Sangat cacat, butuh bantuan untuk aktivitas sehari-hari. Bisa berjalan sedikit.</p>
+            </div>
+            <div class="step-box">
+                <span class="step-num">5</span>
+                <span class="step-title">Stage 5: Kursi roda/bedridden</span>
+                <p>Tidak bisa berjalan sama sekali. Terkurung di kursi roda atau tempat tidur.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">💊</span>
+            <span class="card-title">Obat Parkinson: Aturan Umur</span>
+        </div>
+        <div class="card-body">
+            <p>Aturan praktis untuk memilih obat Parkinson berdasar usia:</p>
+            <ul>
+                <li><strong><60 tahun (muda):</strong> Agonis dopamin (Pramipeksol, Ropinirole)
+                    <br>→ Kenapa? Untuk menghindari komplikasi jangka panjang levodopa (fluktuasi motorik, diskinesia).</li>
+                <li><strong>>60 tahun (tua):</strong> Levodopa (gold standard)
+                    <br>→ Kenapa? Pasien tua lebih tahan terhadap efek samping levodopa dan butuh efek yang lebih cepat/kuat.</li>
+                <li><strong>Tremor dominan:</strong> Triheksifenidil (antikolinergik)
+                    <br>→ Tapi hati-hati pada lansia (>60 tahun) karena bisa menyebabkan delirium, retensi urin, glaukoma!</li>
+                <li><strong>Adjuvan:</strong> Entakapon (COMT inhibitor) → memperpanjang efek levodopa.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mnemonic-box">
+        <div class="mnemonic-title">🎯 Mnemonik: Parkinson Lengkap</div>
+        <div class="mnemonic-text">
+            <span class="mnemonic-big">"TRAP = Tikus Rigid Akhirnya Pingsan"</span>
+            <p><strong>T</strong>remor | <strong>R</strong>igiditas | <strong>A</strong>kinesia | <strong>P</strong>ostural Instability</p>
+            <span class="mnemonic-big">"Hoehn-Yahr = 1-2-3-4-5 = Sisi-Sisi-Jatuh-Bantu-Roda"</span>
+            <p>Stage <strong>1</strong> (1 sisi) | <strong>2</strong> (2 sisi) | <strong>3</strong> (jatuh/goyah) | <strong>4</strong> (butuh bantuan) | <strong>5</strong> (kursi roda)</p>
+            <span class="mnemonic-big">"60 Tahun = Batas Mutus"</span>
+            <p><60 tahun = <strong>Agonis</strong> dopamin (Pramipeksol)<br>>60 tahun = <strong>Levodopa</strong> (L-dopa)</p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="color:var(--primary); margin-bottom:1.5rem;">📋 Pembahasan Soal-soal Parkinson</h2>
+
+    <!-- SOAL 16 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 16</span>
+        <div class="q-text">Pasien usia 60 tahun didiagnosis Parkinson. Dokter ingin memberikan obat yang bisa memperpanjang efek levodopa. Obat yang tepat?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Entakapon</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Entakapon</strong> adalah obat yang termasuk dalam golongan <strong>COMT inhibitor</strong>. Apa itu COMT?</p>
+            <ul>
+                <li><strong>Levodopa</strong> adalah zat yang masuk ke otak dan diubah menjadi dopamin. Tapi sebelum sampai ke otak, banyak levodopa yang dihancurkan di tubuh (perifer).</li>
+                <li><strong>COMT (Catechol-O-Methyltransferase)</strong> adalah salah satu enzim yang menghancurkan levodopa di perifer.</li>
+                <li><strong>Entakapon</strong> menghambat COMT → levodopa tidak dihancurkan di perifer → lebih banyak levodopa yang sampai ke otak → efek levodopa lebih lama dan lebih kuat!</li>
+            </ul>
+            <p><strong>Obat COMT inhibitor lain:</strong> Tolcapone (tapi toksik hati, jarang digunakan).</p>
+            <p><strong>Kombinasi:</strong> Levodopa + Karbidopa + Entakapon = "Triple therapy" untuk Parkinson stadium lanjut.</p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Bayangkan levodopa itu seperti <strong>"paket kiriman"</strong> yang dikirim dari gudang (usus) ke rumah tujuan (otak). Di perjalanan, banyak paket yang dicuri oleh maling (enzim COMT). Entakapon itu seperti <strong>"penjaga paket"</strong> yang mengawal kiriman sepanjang jalan, sehingga lebih banyak paket yang sampai ke rumah tujuan.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"ENTAKAPON = EXTEND (memperpanjang)"</strong> — Entakapon memperpanjang efek levodopa. "Enta-kapon = Entar-kapan (efeknya lama)"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 41 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 41 (Trapezius)</span>
+        <div class="q-text">Stadium Parkinson menurut Hoehn dan Yahr?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Stage 1-5 (lihat penjelasan)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Hoehn-Yahr Staging</strong> adalah cara untuk menggambarkan seberapa parah Parkinson seseorang:</p>
+            <ul>
+                <li><strong>Stage 1:</strong> Gejala hanya di <strong>satu sisi tubuh</strong> (unilateral). Masih minimal gangguan aktivitas.</li>
+                <li><strong>Stage 2:</strong> Gejala di <strong>kedua sisi tubuh</strong> (bilateral), tapi <strong>tidak ada</strong> gangguan keseimbangan/postur.</li>
+                <li><strong>Stage 3:</strong> Gejala bilateral + <strong>mild postural instability</strong>. Masih bisa mandiri (independent).</li>
+                <li><strong>Stage 4:</strong> <strong>Severe disability</strong>. Butuh bantuan untuk sebagian aktivitas. Bisa berjalan/bertahan sendiri sebagian.</li>
+                <li><strong>Stage 5:</strong> <strong>Wheelchair-bound atau bedridden</strong>. Tidak bisa berdiri/jalan tanpa bantuan total.</li>
+            </ul>
+            <p><strong>Catatan penting:</strong> Postural instability muncul di Stage 3+. Kalau muncul di Stage 1-2 = curiga <strong>atypical parkinsonism</strong> (bukan Parkinson idiopatik).</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"1-2-3-4-5 = Sisi-Sisi-Jatuh-Bantu-Roda"</strong> — Stage 1 (1 sisi), Stage 2 (2 sisi), Stage 3 (3-jatuh/goyah), Stage 4 (4-butuh bantuan), Stage 5 (5-kursi roda).</p>
+        </div>
+    </div>
+
+    <!-- SOAL 15 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 15 (Trapezius)</span>
+        <div class="q-text">Pasien mengalami tremor saat menggunakan tangannya (misalnya saat menulis atau memegang gelas). Obat pilihan pertama?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Propranolol</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Tremor aksi (Essential Tremor)</strong> adalah tremor yang muncul saat anggota gerak digunakan (action/postural), bukan saat istirahat. Ini berbeda dengan tremor Parkinson yang muncul saat istirahat dan membaik saat bergerak.</p>
+            <ul>
+                <li><strong>Essential Tremor:</strong> Tremor saat bergerak, bilateral, sering ada riwayat keluarga, membaik dengan alkohol.</li>
+                <li><strong>Parkinson Tremor:</strong> Tremor saat istirahat, unilateral di awal, tidak membaik dengan alkohol.</li>
+            </ul>
+            <p><strong>Obat Essential Tremor (Evidence A):</strong></p>
+            <ol>
+                <li><strong>Propranolol</strong> (β-blocker) — first-line</li>
+                <li><strong>Primidone</strong> (antiepilepsi) — alternatif</li>
+            </ol>
+            <p><strong>Obat Parkinson Tremor:</strong> Triheksifenidil (antikolinergik) — tapi hati-hati pada lansia!</p>
+            <p><strong>Bedakan:</strong></p>
+            <ul>
+                <li>Propranolol = untuk tremor aksi (essential tremor)</li>
+                <li>Triheksifenidil = untuk tremor istirahat (Parkinson)</li>
+                <li>Pramipeksol = untuk Parkinson (agonis dopamin)</li>
+            </ul>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Tremor aksi itu seperti <strong>"tangan yang bergetar saat memegang gelas berisi air penuh"</strong> — getarannya muncul saat kamu berusaha melakukan sesuatu. Tremor Parkinson itu seperti <strong>"tangan yang bergetar saat kamu sedang duduk santai menonton TV"</strong> — getarannya muncul saat istirahat. Propranolol itu seperti <strong>"penenang"</strong> yang meredam getaran saat bekerja.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"PROPRANOLOL = PROFESOR TREMOR"</strong> — Propranolol adalah gold standard tremor aksi/essential tremor. "Propra-NOLOL = NO LOL (tremor berhenti ketawa-ketawa)"</p>
+        </div>
+    </div>
+</div>
+
+<!-- TUMOR -->
+<div id="tumor" class="section">
+    <h2 class="section-title">🧬 Tumor Otak: Benjolan di Dalam Kepala</h2>
+
+    <div class="section-intro">
+        <strong>Apa itu Tumor Otak?</strong> Tumor otak adalah pertumbuhan abnormal sel di dalam otak. Bisa jinak (benign) atau ganas (malignant). Bayangkan otak itu seperti <span class="highlight">kebun yang rapi</span>. Tumor itu seperti <strong>gulma yang tumbuh liar</strong> — bisa menekan tanaman lain (otak normal) dan merebut nutrisi.
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">📊</span>
+            <span class="card-title">WHO Grade Tumor Otak</span>
+        </div>
+        <div class="card-body">
+            <p>WHO (World Health Organization) mengklasifikasikan tumor otak berdasar seberapa agresifnya:</p>
+            <ul>
+                <li><strong>Grade I (Jinak):</strong> Tumbuh lambat, jarang kambuh setelah diangkat. Contoh: Pilocytic astrocytoma, Meningioma, Schwannoma. Survival >10 tahun.</li>
+                <li><strong>Grade II (Rendah ganas):</strong> Tumbuh lambat tapi bisa berubah jadi ganas. Contoh: Diffuse astrocytoma, Oligodendroglioma. Survival 5-10 tahun.</li>
+                <li><strong>Grade III (Ganas):</strong> Tumbuh agresif. Contoh: Anaplastik astrocytoma. Survival 2-3 tahun.</li>
+                <li><strong>Grade IV (Sangat ganas):</strong> Sangat agresif. Contoh: <span class="highlight-red">Glioblastoma Multiforme (GBM)</span>. Survival 14-16 bulan.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🔬</span>
+            <span class="card-title">Biomarker Penting (WHO CNS5 2021)</span>
+        </div>
+        <div class="card-body">
+            <p>Biomarker adalah seperti <strong>"sidik jari molekuler"</strong> yang membantu membedakan jenis tumor:</p>
+            <ul>
+                <li><strong>IDH (Isocitrate Dehydrogenase):</strong>
+                    <ul>
+                        <li><span class="highlight">IDH-mutant</span> = Astrocytoma atau Oligodendroglioma (prognosis lebih baik)</li>
+                        <li><span class="highlight-red">IDH-wildtype</span> = Glioblastoma (prognosis buruk)</li>
+                    </ul>
+                </li>
+                <li><strong>1p/19q codelesi:</strong> Kalau ada = <strong>Oligodendroglioma</strong> (wajib ada IDH-mutant juga!)</li>
+                <li><strong>ATRX:</strong> Kalau <strong>hilang (lost)</strong> = Astrocytoma. Kalau <strong>ada (retained)</strong> = Oligodendroglioma.</li>
+                <li><strong>MGMT methylation:</strong> Kalau metilasi = respons baik terhadap kemoterapi (Temozolomide).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mnemonic-box">
+        <div class="mnemonic-title">🧬 Mnemonik: Bedah Astrocytoma vs Oligodendroglioma</div>
+        <div class="mnemonic-text">
+            <span class="mnemonic-big">"ASTRO LOST, OLIGO CODELESI"</span>
+            <p><strong>Astrocytoma:</strong> IDH-mutant + ATRX <strong>LOST</strong> + p53 mutasi + 1p/19q INTACT<br>
+            <strong>Oligodendroglioma:</strong> IDH-mutant + ATRX <strong>RETAINED</strong> + 1p/19q <strong>CODELESI</strong></p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="color:var(--primary); margin-bottom:1.5rem;">📋 Pembahasan Soal-soal Tumor</h2>
+
+    <!-- SOAL 22 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 22</span>
+        <div class="q-text">Manakah yang BUKAN termasuk tumor intrakranial (tumor di dalam kepala)?</div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Tumor intrakranial</strong> adalah semua tumor yang ada di dalam tengkorak. Dibagi 2 berdasar letaknya:</p>
+            <ul>
+                <li><strong>Intra-axial:</strong> Berasal dari dalam parenkim otak (jaringan otak itu sendiri).
+                    <br>→ Contoh: Astrocytoma, Oligodendroglioma, Glioblastoma, Ependymoma.</li>
+                <li><strong>Extra-axial:</strong> Berasal dari luar parenkim otak (tapi masih di dalam tengkorak).
+                    <br>→ Contoh: Meningioma (dari selaput otak/meninges), Schwannoma (dari saraf), Pituitary adenoma (dari kelenjar pituitari).</li>
+            </ul>
+            <p>Jadi <strong>semua pilihan (Astrocytoma, Oligodendroglioma, Meningioma)</strong> adalah tumor intrakranial. Mungkin ada pilihan lain di soal asli yang bukan tumor (misalnya: abses, hematoma, kista).</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"TUMOR INTRA = DARI DALAM OTAK"</strong> — Astrocytoma, oligodendroglioma dari glia. Meningioma dari meninges (extra-axial). Schwannoma dari saraf.</p>
+        </div>
+    </div>
+
+    <!-- SOAL 20 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 20 (Trapezius)</span>
+        <div class="q-text">Tumor otak yang berasal dari intra-axial (dari dalam jaringan otak), KECUALI?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Meningioma</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Meningioma</strong> adalah tumor yang berasal dari <strong>meninges</strong> (selaput pelindung otak), bukan dari jaringan otak itu sendiri. Meninges ada 3 lapis:</p>
+            <ol>
+                <li><strong>Dura mater:</strong> Lapisan terluar, tebal dan kuat</li>
+                <li><strong>Arachnoid mater:</strong> Lapisan tengah</li>
+                <li><strong>Pia mater:</strong> Lapisan terdalam, menempel pada otak</li>
+            </ol>
+            <p>Meningioma berasal dari sel <strong>arachnoid cap cells</strong> di lapisan arachnoid → ini adalah <strong>extra-axial</strong> (di luar parenkim otak).</p>
+            <p><strong>Ciri radiologi meningioma:</strong></p>
+            <ul>
+                <li>Menempel pada dura (dural-based)</li>
+                <li>Homogeneous enhancement dengan kontras</li>
+                <li>Bisa ada "dural tail" (ekor yang mengikuti dura)</li>
+                <li>Calcification (pengapuran) sering terlihat</li>
+            </ul>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Bayangkan otak itu seperti <strong>buah mangga</strong>. Intra-axial tumor itu seperti <strong>ulat yang ada DI DALAM daging buah</strong> (astrocytoma, glioblastoma). Meningioma itu seperti <strong>kulit yang tumbuh abnormal di LUAR daging buah</strong> — masih di dalam batas mangga (tengkorak), tapi bukan dari dagingnya.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"MENINGIOMA = MENINGES = EXTRA"</strong> — Meningioma berasal dari meninges (extra-axial). Astrocytoma dari astrosit (intra-axial). "Meningioma di LUAR, Glioma di DALAM"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 46 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 46 (Trapezius)</span>
+        <div class="q-text">Tumor otak yang pada pemeriksaan mikroskopis ditemukan "Verocay bodies". Tumor apa ini?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Schwannoma</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Schwannoma</strong> adalah tumor jinak (Grade I) yang berasal dari sel <strong>Schwann</strong> (sel pembungkus saraf). Tumor ini paling sering ditemukan di nervus vestibular (saraf pendengaran/keseimbangan) → disebut <strong>acoustic neuroma</strong> atau <strong>vestibular schwannoma</strong>.</p>
+            <p><strong>Ciri histopatologi Schwannoma:</strong></p>
+            <ul>
+                <li><strong>Antoni A area:</strong> Sel Schwann yang tersusun rapat dan teratur (dense, cellular)</li>
+                <li><strong>Antoni B area:</strong> Sel Schwann yang tersusun longgar (loose, myxoid)</li>
+                <li><strong>Verocay bodies:</strong> Susunan sel yang teratur seperti palisade (barisan) dengan area kosong di tengahnya. Ini adalah tanda khas schwannoma!</li>
+                <li><strong>S100 positif:</strong> Pada pemeriksaan immunohistokimia (IHC)</li>
+            </ul>
+            <p><strong>Gejala klinis (akoustic neuroma):</strong></p>
+            <ul>
+                <li>Tuli sensorineural satu sisi (progressif)</li>
+                <li>Tinitus (bunyi di telinga)</li>
+                <li>Vertigo/instabilitas</li>
+                <li>Kalau besar: tanda peningkatan TIK (sakit kepala, muntah)</li>
+            </ul>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Verocay bodies itu seperti <strong>"barisan prajurit dengan jalan kosong di tengah"</strong> — sel-sel Schwann berbaris rapi di kiri dan kanan, dengan area kosong di tengah. Ini adalah formasi yang sangat khas dan hanya ditemukan di schwannoma. "Verocay = Very Organized Cell Array"</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"SCHWANNOMA = S100 + VEROCAY"</strong> — Schwannoma selalu S100 positif dan memiliki Verocay bodies. Ini adalah kombinasi yang tidak bisa dipalsukan!</p>
+        </div>
+    </div>
+</div>
+
+<!-- TRAUMA -->
+<div id="trauma" class="section">
+    <h2 class="section-title">🤕 Trauma Kepala: Ketika Otak Terbentur</h2>
+
+    <div class="section-intro">
+        <strong>Apa itu Trauma Kepala?</strong> Trauma kepala adalah cedera pada kepala yang bisa mengenai kulit, tulang tengkorak, atau otak. Bayangkan otak itu seperti <span class="highlight">tofu yang dibungkus plastik (meninges) dan dimasukkan ke dalam kotak kardus (tengkorak)</span>. Kalau kotaknya jatuh, tofunya bisa hancur!
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🩻</span>
+            <span class="card-title">Hematoma Intrakranial (Kumpulan Darah di Otak)</span>
+        </div>
+        <div class="card-body">
+            <p>Setelah trauma, pembuluh darah di dalam atau sekitar otak bisa pecah → darah terkumpul → <strong>hematoma</strong>. Ada 3 tipe utama:</p>
+
+            <div class="compare-grid">
+                <div class="compare-box compare-left">
+                    <div class="compare-title">🔴 Epidural (EDH)</div>
+                    <ul>
+                        <li><strong>Lokasi:</strong> Antara tengkorak dan dura</li>
+                        <li><strong>Bentuk CT:</strong> <span class="highlight">Lensa/Bikonveks</span></li>
+                        <li><strong>Sumber:</strong> Arteri meningea media</li>
+                        <li><strong>Ciri:</strong> Terbatas sutura</li>
+                        <li><strong>Talk & Die:</strong> Sadar → koma mendadak</li>
+                        <li><strong>Emergency!</strong> BURR HOLE <6 jam</li>
+                    </ul>
+                </div>
+                <div class="compare-box compare-right">
+                    <div class="compare-title">🟠 Subdural (SDH)</div>
+                    <ul>
+                        <li><strong>Lokasi:</strong> Antara dura dan arachnoid</li>
+                        <li><strong>Bentuk CT:</strong> <span class="highlight">Sabit/Crescent</span></li>
+                        <li><strong>Sumber:</strong> Vena jembatan</li>
+                        <li><strong>Ciri:</strong> Melebar suture</li>
+                        <li><strong>Onset:</strong> Bisa akut/subakut/kronis</li>
+                        <li><strong>Bedah:</strong> Kalau >1 cm atau GCS turun</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p><strong>Subarachnoid Hemorrhage (SAH):</strong> Darah di ruang subarachnoid (mengikuti sulci/gyrus). Penyebab utama: ruptur aneurisma (85%).</p>
+        </div>
+    </div>
+
+    <div class="mnemonic-box">
+        <div class="mnemonic-title">🤕 Mnemonik: Bentuk CT Hematoma</div>
+        <div class="mnemonic-text">
+            <span class="mnemonic-big">"EDH = LENSA, SDH = SABIT, SAH = SULCI"</span>
+            <p><strong>Epidural:</strong> Bentuk <strong>lensa/bikonveks</strong> (terbatas sutura)<br>
+            <strong>Subdural:</strong> Bentuk <strong>sabit/crescent</strong> (melebar suture)<br>
+            <strong>Subarachnoid:</strong> Mengisi <strong>sulci</strong> (mengikuti kontur otak)</p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="color:var(--primary); margin-bottom:1.5rem;">📋 Pembahasan Soal-soal Trauma</h2>
+
+    <!-- SOAL 26 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 26</span>
+        <div class="q-text">Pasien trauma kepala. CT scan menunjukkan darah yang terkumpul berbentuk seperti lensa cembung di kedua sisi (bikonveks). Diagnosis?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Perdarahan Sub Epidural (Epidural Hematoma)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Epidural hematoma</strong> memiliki bentuk yang sangat khas di CT scan: <span class="highlight">lentiform atau bikonveks</span> (seperti lensa kacamata atau lentil).</p>
+            <p><strong>Kenapa bentuknya begitu?</strong></p>
+            <ul>
+                <li>Darah mengalir ke ruang <strong>epidural</strong> (antara tengkorak dan dura mater).</li>
+                <li>Dura mater menempel kuat pada <strong>sutura</strong> (jahitan tulang tengkorak).</li>
+                <li>Jadi darah tidak bisa melewati sutura → terbatas di satu area → membentuk lensa!</li>
+            </ul>
+            <p><strong>Bedakan dengan Subdural:</strong></p>
+            <ul>
+                <li>Subdural: Darah di antara dura dan arachnoid. Dura tidak menempel kuat di sini, jadi darah bisa <strong>melebar</strong> mengikuti kontur otak → bentuk <strong>sabit/crescent</strong> (seperti bulan sabit).</li>
+            </ul>
+            <p><strong>Ciri klinis EDH:</strong> "Talk and die syndrome" — pasien sadar sesaat setelah trauma (lucid interval), kemudian koma mendadak saat hematoma membesar.</p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Bayangkan tengkorak itu seperti <strong>kaleng sarden</strong>. Dura mater (selaput tebal) menempel kuat pada jahitan kaleng (sutura). EDH itu seperti <strong>air yang masuk di antara kaleng dan plastik pembungkus</strong> — airnya terbatas oleh jahitan kaleng, jadi membentuk gumpalan lensa. SDH itu seperti <strong>air yang masuk di antara plastik pembungkus dan sarden</strong> — airnya bisa mengalir bebas mengikuti bentuk sarden, jadi bentuknya sabit/melebar.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"BIKONVEKS = BIKIN VES = EPIDURAL"</strong> — Bikonveks = Epidural. Sabit = Subdural. "EPI = EKSTRA = BIKONVEKS (terbatas)"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 25 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 25</span>
+        <div class="q-text">CT scan pasien trauma menunjukkan darah yang mengikuti kontur gyrus (lipatan otak), membentuk garis putih mengikuti pola otak. Diagnosis?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Perdarahan Subarachnoid (SAH)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Subarachnoid Hemorrhage (SAH)</strong> adalah perdarahan ke dalam ruang <strong>subarachnoid</strong> — ruang di antara arachnoid dan pia mater yang berisi cairan otak (CSF).</p>
+            <p><strong>Kenapa mengikuti kontur gyrus?</strong></p>
+            <ul>
+                <li>Ruang subarachnoid mengelilingi seluruh otak, masuk ke dalam <strong>sulci</strong> (lembah) dan mengikuti <strong>gyrus</strong> (bukit).</li>
+                <li>Jadi darah yang masuk ke ruang ini akan mengikuti pola anatomi otak → terlihat seperti garis putih/hiperdensitas di sepanjang sulci dan fissura.</li>
+            </ul>
+            <p><strong>Penyebab SAH:</strong></p>
+            <ol>
+                <li><strong>Ruptur aneurisma (85%):</strong> Pembuluh darah di otak yang melembung dan pecah.</li>
+                <li><strong>Trauma:</strong> Cedera kepala.</li>
+                <li><strong>AVM (Arteriovenous Malformation):</strong> Kelainan pembuluh darah bawaan.</li>
+            </ol>
+            <p><strong>Tanda klinis SAH:</strong> "Thunderclap headache" — sakit kepala tiba-tiba seperti ditonjok, "worst headache of my life".</p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>SAH itu seperti <strong>"tinta yang diteteskan di atas peta dengan banyak lembah dan bukit"</strong> — tintanya akan mengalir mengikuti kontur peta, masuk ke lembah-lembah (sulci) dan mengelilingi bukit-bukit (gyrus). EDH dan SDH itu seperti <strong>"tinta yang diteteskan di atas kertas datar"</strong> — bentuknya geometris (lensa atau sabit).</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"SAH = SULCI = SABIT ARACHNOID"</strong> — SAH mengisi sulci dan kisterna basal. "Subarachnoid = di bawah arachnoid = mengikuti kontur otak"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 36 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 36 (Trapezius)</span>
+        <div class="q-text">Ciri-ciri perdarahan epidural, manakah yang BENAR?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Benar Semua</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p>Semua ciri berikut adalah ciri hematoma epidural:</p>
+            <ul>
+                <li><strong>Bentuk lensa/bikonveks:</strong> Karena terbatas oleh sutura tengkorak</li>
+                <li><strong>Asal dari arteri meningea media:</strong> Arteri ini berjalan di antara tengkorak dan dura, mudah robek saat trauma (terutama fraktur temporal)</li>
+                <li><strong>Talk and die syndrome:</strong> Pasien sadar sesaat setelah trauma, lalu koma mendadak saat hematoma membesar</li>
+                <li><strong>Emergency neurosurgical:</strong> BURR HOLE (membuat lubang di tengkorak untuk mengeluarkan darah) harus dilakukan <6 jam untuk menyelamatkan nyawa</li>
+            </ul>
+            <p><strong>EDH adalah emergency!</strong> Kalau tidak segera dioperasi, tekanan di dalam kepala akan naik → hernia otak → kematian.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"EDH = EMERGENCY DARAH HITAM"</strong> — Epidural = emergency neurosurgical! Bikonveks, arteri, terbatas sutura. "Epidural = EPI-DURAS = di luar dura"</p>
+        </div>
+    </div>
+</div>
+
+<!-- ENCEFALITIS -->
+<div id="encefalitis" class="section">
+    <h2 class="section-title">🧪 Ensefalitis: Otak Terkena Infeksi</h2>
+
+    <div class="section-intro">
+        <strong>Apa bedanya Meningitis dan Ensefalitis?</strong>
+        <ul>
+            <li><strong>Meningitis:</strong> Infeksi di <span class="highlight">selaput otak</span> (meninges) → seperti <strong>"sarung bantal yang kotor"</strong></li>
+            <li><strong>Ensefalitis:</strong> Infeksi di <span class="highlight">jaringan otak</span> itu sendiri → seperti <strong>"isi bantal yang kotor"</strong></li>
+            <li><strong>Meningoencephalitis:</strong> Keduanya terkena → sarung dan isi bantal kotor</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🦠</span>
+            <span class="card-title">Ensefalitis Herpes Simplex (HSE)</span>
+        </div>
+        <div class="card-body">
+            <p><strong>HSE</strong> adalah ensefalitis paling umum di dunia. Disebabkan oleh virus <strong>Herpes Simplex Virus-1 (HSV-1)</strong> — virus yang sama penyebab bisul/cold sore di bibir.</p>
+            <ul>
+                <li><strong>Cara masuk:</strong> Virus "tidur" di ganglion trigeminus (saraf wajah). Saat imunitas turun, virus aktif dan naik ke otak melalui saraf → menyerang <span class="highlight">lobus temporal</span>.</li>
+                <li><strong>Gejala khas:</strong>
+                    <ul>
+                        <li>Demam + sakit kepala</li>
+                        <li>Gangguan perilaku/perubahan kepribadian (lobus temporal = pusat emosi/memori)</li>
+                        <li>Afasia (gangguan bahasa)</li>
+                        <li>Kejang</li>
+                        <li>Delirium (bingung)</li>
+                    </ul>
+                </li>
+                <li><strong>Mortalitas:</strong> <span class="highlight-red">70% tanpa terapi!</span> Turun ke 20-30% dengan terapi cepat.</li>
+                <li><strong>Terapi:</strong> <span class="highlight">Asiklovir 10 mg/kg IV setiap 8 jam selama 10-14 hari</span>. Harus dimulai SEGERA berdasarkan kecurigaan klinis, tanpa menunggu hasil PCR!</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="color:var(--primary); margin-bottom:1.5rem;">📋 Pembahasan Soal Ensefalitis</h2>
+
+    <!-- SOAL 13 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 13</span>
+        <div class="q-text">Seseorang ditemukan di garasi dengan generator yang menyala dan asap hitam tebal. Dia tidak sadar. Diagnosis?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Ensefalopati Hipoksia</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Kata kunci dari soal:</strong></p>
+            <ul>
+                <li><strong>"Generator hidup dengan asap hitam"</strong> → Generator bensin yang berjalan di ruang tertutup menghasilkan <span class="highlight-red">Karbon Monoksida (CO)</span></li>
+                <li><strong>"Asap hitam"</strong> → Tanda pembakaran tidak sempurna → CO berlimpah</li>
+                <li><strong>"Tidak sadar"</strong> → Kerusakan otak akibat hipoksia (kekurangan oksigen)</li>
+            </ul>
+            <p><strong>Karbon Monoksida (CO) itu berbahaya karena:</strong></p>
+            <ol>
+                <li>CO memiliki afinitas <strong>240 kali lebih tinggi</strong> terhadap hemoglobin dibanding oksigen → hemoglobin lebih suka mengikat CO daripada O₂</li>
+                <li>Akibatnya: darah tidak bisa mengangkut oksigen ke otak dan jaringan → <strong>hipoksia jaringan</strong></li>
+                <li>Otak sangat sensitif terhadap hipoksia → dalam 4-6 menit, neuron mulai mati</li>
+            </ol>
+            <p><strong>Bedakan:</strong></p>
+            <ul>
+                <li><strong>Encephalitis:</strong> Inflamasi akibat infeksi (virus/bakteri masuk ke otak)</li>
+                <li><strong>Encephalopathy:</strong> Disfungsi otak tanpa inflamasi (akibat hipoksia, toksin, metabolik)</li>
+            </ul>
+            <p>Karena ini akibat CO (toksin) bukan infeksi → diagnosisnya <strong>Encephalopathy</strong>, bukan Encephalitis.</p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Bayangkan darah itu seperti <strong>"taksi yang mengantar penumpang (oksigen) ke berbagai tempat (jaringan tubuh)"</strong>. CO itu seperti <strong>"penumpang palsu yang membayar 240x lebih mahal"</strong> — taksi-taksi jadi lebih suka mengangkut penumpang palsu ini daripada penumpang asli (oksigen). Hasilnya? Semua tempat kekurangan oksigen dan kolaps!</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"ASAP HITAM = HIPOKSIA"</strong> — Generator + asap hitam = CO/hipoksia = encephalOPATI (bukan encephalITIS). "-ITIS = inflamasi, -OPATI = disfungsi"</p>
+        </div>
+    </div>
+</div>
+
+<!-- GERAK -->
+<div id="gerak" class="section">
+    <h2 class="section-title">🏃 Gangguan Gerak: Otak Pengendali Gerak</h2>
+
+    <div class="section-intro">
+        <strong>Sistem gerak tubuh</strong> dikendalikan oleh banyak bagian otak dan saraf. Bayangkan tubuh seperti <span class="highlight">orkestra</span>. Otak adalah konduktor, saraf adalah pemain musik, dan otot adalah instrumen. Kalau konduktornya kacau, musiknya jadi berantakan!
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🧠</span>
+            <span class="card-title">Serebelum: Pusat Koordinasi</span>
+        </div>
+        <div class="card-body">
+            <p><strong>Serebelum</strong> adalah bagian otak di belakang (otak kecil). Fungsinya seperti <strong>"editor video"</strong> — dia memastikan setiap gerakan halus, tepat, dan terkoordinasi.</p>
+            <p><strong>Kalau serebelum rusak:</strong></p>
+            <ul>
+                <li><strong>Ataksia:</strong> Jalan goyang-goyang seperti orang mabuk, kaki lebar</li>
+                <li><strong>Dysmetria:</strong> Salah ukur jarak (contoh: jari tidak bisa tepat ke hidung)</li>
+                <li><strong>Dysdiadochokinesia:</strong> Tidak bisa memutar tangan cepat (pronasi-supinasi)</li>
+                <li><strong>Tremor intention:</strong> Gemetar saat mencapai target (misal: minum air tumpah saat gelas mau sampai mulut)</li>
+                <li><strong>Nistagmus:</strong> Mata bergerak tidak terkontrol</li>
+                <li><strong>Hipotonia:</strong> Otot lemas</li>
+            </ul>
+            <p><strong>Romberg test pada serebellar:</strong> <span class="highlight">NEGATIF</span> (tidak memburuk saat menutup mata). Serebelum tidak bergantung pada penglihatan untuk keseimbangan.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🦴</span>
+            <span class="card-title">Medulla Spinalis: Kabel Utama</span>
+        </div>
+        <div class="card-body">
+            <p><strong>Medulla spinalis (sumsum tulang belakang)</strong> adalah "kabel" yang menghubungkan otak dengan seluruh tubuh. Ada 33 segmen (cervical 8, thoracic 12, lumbar 5, sacral 5, coccygeal 1).</p>
+            <p><strong>Kalau medulla spinalis terluka:</strong></p>
+            <ul>
+                <li><strong>Motorik:</strong> Lemah/paralisis di bawah level lesi</li>
+                <li><strong>Sensorik:</strong> Kehilangan rasa di bawah level lesi</li>
+                <li><strong>Autonomik:</strong> Gangguan fungsi kandung kemih (miksi), fungsi seksual, pencernaan</li>
+            </ul>
+            <p><strong>Tipe lesi:</strong></p>
+            <ul>
+                <li><strong>Complete:</strong> Tidak ada fungsi sama sekali di bawah level lesi → prognosis buruk</li>
+                <li><strong>Incomplete:</strong> Ada fungsi yang tersisa (terutama di area sacral) → prognosis lebih baik</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="color:var(--primary); margin-bottom:1.5rem;">📋 Pembahasan Soal Gerak</h2>
+
+    <!-- SOAL 11 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 11</span>
+        <div class="q-text">Pasien mengalami gangguan keseimbangan yang sangat sulit, dan bicara pelo (tidak jelas). Bagian otak mana yang bermasalah?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Cerebellum (Serebelum)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Serebelum</strong> adalah pusat koordinasi gerak, keseimbangan, dan bicara. Fungsinya seperti <strong>"autocorrect"</strong> pada ponsel — dia memperbaiki setiap gerakan agar halus dan tepat.</p>
+            <p><strong>Kalau serebelum rusak:</strong></p>
+            <ul>
+                <li><strong>Keseimbangan:</strong> Jalan goyang, lebar, sering jatuh (seperti orang mabuk)</li>
+                <li><strong>Bicara:</strong> <span class="highlight">Dysarthria</span> (bicara pelo) — serebelum mengkoordinasikan otot-otot bicara (lidah, bibir, pita suara)</li>
+                <li><strong>Koordinasi tangan:</strong> Salah ukur jarak, tidak bisa memutar tangan cepat</li>
+                <li><strong>Mata:</strong> Nistagmus (mata bergerak tidak terkontrol)</li>
+            </ul>
+            <p><strong>Bedakan dengan Cortex (Korteks):</strong></p>
+            <ul>
+                <li>Korteks = pusat perintah gerak ("mau bergerak"). Kalau rusak = <strong>lemah/paralisis</strong> (tidak bisa bergerak).</li>
+                <li>Serebelum = pusat koordinasi gerak ("gerakan halus"). Kalau rusak = <strong>gerakan kacau tapi tetap kuat</strong> (bisa bergerak tapi tidak terkoordinasi).</li>
+            </ul>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Serebelum itu seperti <strong>"sistem stabilizer pada kamera"</strong>. Kalau kamu berjalan sambil merekam video, stabilizer membuat gambar tetap halus meski kamu goyang. Kalau stabilizer rusak, video jadi goyang-goyang meski kameranya bagus. Serebelum rusak = tubuh goyang-goyang meski kekuatan otot masih ada.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"CEREBELLUM = COORDINATOR"</strong> — Serebellum = koordinasi. Kalau koordinasi rusak = serebelum. "Cerebellum = Cere-balance-um"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 30 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 30</span>
+        <div class="q-text">Pasien dengan kelainan pada medulla spinalis (sumsum tulang belakang). Kondisi apa yang akan ditemukan?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Paresis (lemah), Gangguan Miksi (kencing), Disfungsi Seksual</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Medulla spinalis</strong> adalah "kabel super highway" yang menghubungkan otak dengan tubuh. Kabel ini membawa 3 jenis "traffic":</p>
+            <ol>
+                <li><strong>Traffic motorik (turun):</strong> Perintah gerak dari otak ke otot → kalau rusak = <span class="highlight">paresis/paralisis</span> (lemah/lumpuh)</li>
+                <li><strong>Traffic sensorik (naik):</strong> Rasa dari tubuh ke otak → kalau rusak = kehilangan rasa</li>
+                <li><strong>Traffic autonomik:</strong> Sinyal untuk organ internal → kalau rusak = gangguan fungsi organ</li>
+            </ol>
+            <p><strong>Gangguan autonomik pada lesi spinal:</strong></p>
+            <ul>
+                <li><strong>Miksi:</strong> Kandung kemih tidak bisa dikosongkan (retensi) atau tidak bisa menahan (inkontinensia)</li>
+                <li><strong>Fungsi seksual:</strong> Disfungsi ereksi/ejakulasi</li>
+                <li><strong>Pencernaan:</strong> Konstipasi (susah BAB)</li>
+                <li><strong>Suhu tubuh:</strong> Susah mengatur suhu</li>
+            </ul>
+            <p><strong>Level lesi menentukan gejala:</strong></p>
+            <ul>
+                <li><strong>Cervical tinggi (C1-C4):</strong> Quadriplegia (lumpuh keempat ekstremitas) + gangguan napas</li>
+                <li><strong>Cervical rendah (C5-C8):</strong> Quadriplegia tapi fungsi napas terjaga</li>
+                <li><strong>Thoracic:</strong> Paraplegia (lumpuh kedua kaki)</li>
+                <li><strong>Lumbar/Sacral:</strong> Gangguan kaki + semua fungsi autonomik (miksi, seksual)</li>
+            </ul>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Medulla spinalis itu seperti <strong>"kabel internet utama yang masuk ke rumah"</strong>. Kalau kabelnya putus di tengah jalan, semua perangkat di rumah terkena dampaknya: TV tidak bisa nonton (motorik), telepon mati (sensorik), dan smart home tidak berfungsi (autonomik). Semuanya terpengaruh karena kabel utama putus!</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"MEDULLA = MOTOR + MIKSI + MATING"</strong> — Lesi medulla spinalis = gangguan motorik + miksi + fungsi seksual. "3M = Motor, Miksi, Mating"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 27 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 27</span>
+        <div class="q-text">Pasien mengeluh nyeri yang berjalan dari bokong, ke belakang paha, ke betis, sampai ke ujung ibu jari kaki. Diagnosis?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Radikulopati</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Radikulopati</strong> adalah kondisi di mana <strong>akar saraf (radix)</strong> tertekan atau teriritasi. Akar saraf adalah cabang saraf yang keluar dari sumsum tulang belakang.</p>
+            <p><strong>Ciri khas radikulopati:</strong></p>
+            <ul>
+                <li><strong>Nyeri mengikuti jalur saraf (dermatom):</strong> Dari bokong → posterior paha → betis → lateral/posterior kaki → ujung kaki</li>
+                <li><strong>Bisa disertai:</strong> Kebas, kesemutan, lemah di area yang dilalui saraf</li>
+                <li><strong>Memburuk saat:</strong> Batuk, bersin, mengejan (maneuver Valsalva) — karena meningkatkan tekanan di saraf</li>
+            </ul>
+            <p><strong>Nyeri sciatica (L4-S1):</strong> Ini adalah radikulopati paling umum, akibat kompresi akar saraf lumbosakral. Ujung ibu jari kaki = saraf S1.</p>
+            <p><strong>Bedakan:</strong></p>
+            <ul>
+                <li><strong>Radikulopati:</strong> Nyeri mengikuti dermatom, dari tulang belakang ke perifer</li>
+                <li><strong>Mononeuropati:</strong> 1 saraf perifer terkena (contoh: Carpal Tunnel Syndrome = saraf median di pergelangan tangan)</li>
+                <li><strong>Polineuropati:</strong> Banyak saraf terkena, biasanya simetris distal (contoh: neuropati diabetik — kebas di kedua kaki ujung)</li>
+            </ul>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Radikulopati itu seperti <strong>"sumbatan di jalan tol utama"</strong>. Macetnya dimulai dari pintu tol (tulang belakang) dan mengalir ke semua jalan yang keluar dari tol tersebut (tangan/kaki). Mononeuropati itu seperti <strong>"jalan kecil yang macet"</strong> — hanya satu jalan kecil yang bermasalah, bukan jalan tol utamanya.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"RADIK = AKAR = DERMATOM"</strong> — Radikulopati = lesi akar saraf = nyeri mengikuti dermatom. Sciatica = S1 = ibu jari kaki. "Radik = Root = Route (mengikuti jalur)"</p>
+        </div>
+    </div>
+</div>
+
+<!-- NYERI KEPALA -->
+<div id="nyeri" class="section">
+    <h2 class="section-title">🤯 Nyeri Kepala: Sakit Kepala yang Beragam</h2>
+
+    <div class="section-intro">
+        <strong>Nyeri kepala</strong> adalah keluhan paling umum di dunia. Tapi tidak semua sakit kepala sama! Ada yang biasa, ada yang berbahaya. Sebagai dokter, kamu harus bisa membedakan <span class="highlight">nyeri kepala primer</span> (tidak berbahaya) dan <span class="highlight-red">nyeri kepala sekunder</span> (tanda penyakit serius).
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🌀</span>
+            <span class="card-title">Migraine: Monster Nyeri Kepala</span>
+        </div>
+        <div class="card-body">
+            <p><strong>Migraine</strong> adalah nyeri kepala yang sangat umum, terutama pada perempuan usia 20-40 tahun.</p>
+            <p><strong>Kriteria ICHD-3 (untuk diagnosis):</strong></p>
+            <ul>
+                <li>Durasi: <strong>4-72 jam</strong> kalau tidak diobati</li>
+                <li>Karakter: <strong>Satu sisi</strong>, <strong>berdenyut</strong>, <strong>sedang-berat</strong>, <strong>memburuk saat aktivitas</strong></li>
+                <li>Serta merta: <strong>Mual/muntah</strong> dan/atau <strong>fotofobia (takut cahaya)</strong> + <strong>fonofobia (takut suara)</strong></li>
+            </ul>
+            <p><strong>Migraine dengan Aura (20%):</strong> Sebelum sakit kepala, ada gejala neurologis sementara:</p>
+            <ul>
+                <li><strong>Visual (paling umum):</strong> Melihat cahaya berkelip, garis zig-zag, titik buta</li>
+                <li><strong>Sensorik:</strong> Kebas/merinding di satu sisi tubuh</li>
+                <li><strong>Speech:</strong> Bicara pelo/sulit mencari kata</li>
+            </ul>
+            <p><strong>Terapi Akut:</strong> NSAID (ibuprofen), Parasetamol, <span class="highlight">Triptan (Sumatriptan)</span></p>
+            <p><strong>Profilaksis:</strong> <span class="highlight">Propranolol</span>, Topiramat, Amitriptilin, CGRP antagonis</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">⚡</span>
+            <span class="card-title">Cluster Headache: "Suicide Headache"</span>
+        </div>
+        <div class="card-body">
+            <p><strong>Cluster headache</strong> adalah nyeri kepala <strong>paling parah</strong> yang dikenal manusia. Pasien sering mengatakan ingin bunuh diri karena nyerinya (hence the name).</p>
+            <ul>
+                <li><strong>Durasi:</strong> 15-180 menit (sangat singkat tapi sangat parah)</li>
+                <li><strong>Lokasi:</strong> Satu sisi, di sekitar mata/pelipis</li>
+                <li><strong>Karakter:</strong> Sangat parah, menusuk, tidak bisa diam</li>
+                <li><strong>Autonomik:</strong> Mata berair, hidung berair/mampet, pupil kecil, kelopak mata jatuh (ptosis)</li>
+                <li><strong>Frekuensi:</strong> 1-8 kali per hari!</li>
+            </ul>
+            <p><strong>Terapi Akut:</strong> <span class="highlight">Oksigen 100%</span> 12-15 L/menit (sangat efektif!), Sumatriptan suntik</p>
+            <p><strong>Profilaksis:</strong> Verapamil, Litium</p>
+        </div>
+    </div>
+
+    <div class="mnemonic-box">
+        <div class="mnemonic-title">🤯 Mnemonik: Red Flags Nyeri Kepala (SNOOP4)</div>
+        <div class="mnemonic-text">
+            <span class="mnemonic-big">"SNOOP4 = Waspada Penyakit Serius!"</span>
+            <p><strong>S</strong>ystemic symptoms (demam, berat badan turun)<br>
+            <strong>N</strong>eurologic deficit (lemah, kebas, bicara pelo)<br>
+            <strong>O</strong>nset sudden ("thunderclap" — sakit paling parah dalam hidup)<br>
+            <strong>O</strong>lder age (>50 tahun, terutama >65)<br>
+            <strong>P</strong>attern change / progressive (makin parah, makin sering)<br>
+            <strong>P</strong>ostural (berubah saat berdiri/berbaring)<br>
+            <strong>P</strong>recipitated by Valsalva (batuk, bersin, mengejan)<br>
+            <strong>P</strong>regnancy/postpartum (hamil/nifas)</p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="color:var(--primary); margin-bottom:1.5rem;">📋 Pembahasan Soal Nyeri Kepala</h2>
+
+    <!-- SOAL 17 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 17</span>
+        <div class="q-text">Pasien dengan migraine sering. Dokter ingin memberikan obat untuk mencegah migraine datang. Obat dengan evidence level A?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Propranolol</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Profilaksis migraine</strong> adalah obat yang diminum rutin untuk <strong>mencegah</strong> migraine datang, bukan untuk meredakan saat migraine sudah datang.</p>
+            <p><strong>Obat profilaksis migraine dengan Evidence Level A (paling kuat):</strong></p>
+            <ol>
+                <li><strong>Propranolol</strong> (β-blocker) — first-line paling umum</li>
+                <li><strong>Metoprolol</strong> (β-blocker lain)</li>
+                <li><strong>Topiramat</strong> (antiepilepsi)</li>
+                <li><strong>Valproat</strong> (antiepilepsi)</li>
+                <li><strong>Amitriptilin</strong> (antidepresan trisiklik)</li>
+                <li><strong>Erenumab</strong> (CGRP antagonis — obat baru, sangat efektif)</li>
+            </ol>
+            <p><strong>Bedakan dengan terapi akut:</strong></p>
+            <ul>
+                <li><strong>Profilaksis:</strong> Diminum rutin setiap hari untuk mencegah</li>
+                <li><strong>Akut:</strong> Diminum saat migraine sudah datang (Sumatriptan, NSAID, Parasetamol)</li>
+            </ul>
+            <p><strong>Ergotamin</strong> adalah obat untuk terapi AKUT, bukan profilaksis. Jadi bukan jawaban yang tepat untuk soal ini.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"PROPRANOLOL = PROFILAKSIS MIGRAINE"</strong> — Propranolol = Profilaksis. Ergotamin = Emergency/Eksis (akut). "PRO = PROfilaksis"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 18 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 18</span>
+        <div class="q-text">Pasien dengan migraine tanpa aura. Obat yang diberikan saat migraine datang?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Sumatriptan</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Sumatriptan</strong> adalah obat golongan <strong>Triptan</strong> — 5-HT1B/1D agonis. Ini adalah <strong>first-line terapi akut migraine</strong> dengan atau tanpa aura.</p>
+            <p><strong>Cara kerja Sumatriptan:</strong></p>
+            <ul>
+                <li>Menyempitkan pembuluh darah di kepala yang melebar saat migraine</li>
+                <li>Menghambat pelepasan neuropeptida yang menyebabkan inflamasi</li>
+                <li>Menekan sinyal nyeri di trigeminal nerve</li>
+            </ul>
+            <p><strong>Dosis:</strong> 50-100 mg oral, 6 mg suntik, 20 mg nasal spray</p>
+            <p><strong>Kontraindikasi:</strong> Penyakit jantung, hipertensi tidak terkontrol, hemiplegic/basilar migraine, sedang menggunakan MAOI.</p>
+            <p><strong>Efek samping:</strong> Rasa berat di dada, pusing, rasa panas, mual.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"SUMATRIPTAN = SUM-MIGRAINE"</strong> — Sumatriptan untuk migraine. "SUMA = SUMbangan untuk migraine"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 23 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 23</span>
+        <div class="q-text">Pasien dengan nyeri kepala. Saat diperiksa, dokter menemukan nyeri pada otot kepala dan leher. Bagian mana yang menerima rangsangan nyeri intrakranial?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Otot Kepala dan Leher</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p>Ini adalah konsep penting: <strong>tidak semua bagian otak bisa merasakan nyeri!</strong></p>
+            <p><strong>Bagian otak yang TIDAK merasakan nyeri:</strong></p>
+            <ul>
+                <li>Parenkim otak (jaringan otak itu sendiri)</li>
+                <li>Ependyma (lapisan yang melapisi ventrikel)</li>
+                <li>Pia mater (lapisan terdalam meninges)</li>
+            </ul>
+            <p><strong>Bagian yang BISA merasakan nyeri:</strong></p>
+            <ul>
+                <li>Dura mater (lapisan terluar meninges)</li>
+                <li>Pembuluh darah besar di otak (arteri basal, arteri meningea)</li>
+                <li>Sinus venous</li>
+                <li><span class="highlight">Otot kepala dan leher</span></li>
+                <li>Nervus kranial (V, VII, IX, X)</li>
+            </ul>
+            <p><strong>Kenapa otot kepala-leher bisa nyeri?</strong> Karena saat ada gangguan intrakranial (misal meningitis, TIK tinggi), otot-otot ini tegang sebagai respons protektif → <strong>tension-type headache</strong>.</p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Bayangkan otak itu seperti <strong>buah semangka</strong>. Daging semangkanya (parenkim) tidak bisa merasakan nyeri — kamu bisa potong daging semangka tanpa rasa sakit. Tapi <strong>kulit semangka</strong> (dura), <strong>tali yang menggantung semangka</strong> (pembuluh darah), dan <strong>otot leher yang memegang semangka</strong> semua bisa merasakan nyeri!</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"OTAK TIDAK NYERI, YANG NYERI DI LUARNYA"</strong> — Parenkim otak tidak memiliki nociceptor. Yang nyeri: dura, pembuluh darah besar, otot, dan saraf.</p>
+        </div>
+    </div>
+</div>
+
+<!-- PSIKIATRI -->
+<div id="psikiatri" class="section">
+    <h2 class="section-title">🧩 Psikiatri: Dunia Jiwa & Perilaku</h2>
+
+    <div class="section-intro">
+        <strong>Psikiatri</strong> adalah ilmu yang mempelajari gangguan jiwa, pikiran, perasaan, dan perilaku. Sebagai dokter, kamu harus memahami bahwa <span class="highlight">otak dan pikiran tidak bisa dipisahkan</span>. Gangguan jiwa bukan karena "lemah iman" atau "malas", tapi karena ada gangguan biologis di otak (neurotransmitter, struktur otak, genetik).
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🎭</span>
+            <span class="card-title">Skizofrenia: Dunia yang Terpecah</span>
+        </div>
+        <div class="card-body">
+            <p><strong>Skizofrenia</strong> adalah gangguan psikotik kronis yang ditandai dengan <strong>"pecahnya" fungsi pikiran</strong> (schizo = pecah, phren = pikiran).</p>
+            <p><strong>Tanda kardinal (4A):</strong></p>
+            <ul>
+                <li><strong>Affect (Afek):</strong> Emosi datar/tidak sesuai (tidak ada ekspresi wajah, tidak tertawa/sedih meski situasinya sesuai)</li>
+                <li><strong>Autism (Autisme):</strong> Menarik diri dari sosial, tidak peduli dengan lingkungan</li>
+                <li><strong>Ambivalence (Ambivalensi):</strong> Perasaan bertentangan (senang dan sedih bersamaan)</li>
+                <li><strong>Association (Asosiasi):</strong> Gangguan jalan pikir (tidak nyambung, melompat-lompat)</li>
+            </ul>
+            <p><strong>Gejala positif (ada sesuatu yang tidak seharusnya ada):</strong> Halusinasi (mendengar suara), delusi (keyakinan salah), gangguan pikir</p>
+            <p><strong>Gejala negatif (sesuatu yang seharusnya ada hilang):</strong> Afek datar, autism, amotivasi, alogia (bicara sedikit)</p>
+            <p><strong>Subtipe:</strong></p>
+            <ul>
+                <li><strong>Paranoid:</strong> Delusi dikejar/dijahati, halusinasi — fungsi relatif terjaga</li>
+                <li><strong>Katatonik:</strong> Stupor (diam kaku), posturing, negativisme</li>
+                <li><strong>Disorganized:</strong> Afek datar, perilaku kacau, tidak teratur</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">💊</span>
+            <span class="card-title">Farmakologi Psikiatri Penting</span>
+        </div>
+        <div class="card-body">
+            <p><strong>1. Antipsikotik (untuk Skizofrenia & Psikosis):</strong></p>
+            <ul>
+                <li><strong>Atipikal (Second Generation):</strong> Risperidon, Olanzapin, Quetiapin, Aripiprazol, Clozapin</li>
+                <li><strong>Tipikal (First Generation):</strong> Haloperidol, Chlorpromazine (banyak efek samping ekstrapiramidal)</li>
+            </ul>
+            <p><strong>2. Antidepresan:</strong></p>
+            <ul>
+                <li><strong>SSRI:</strong> Sertralin, Fluoxetin, Escitalopram, Paroxetin (first-line untuk depresi & anxiety)</li>
+                <li><strong>TCA:</strong> Amitriptilin, Imipramin (efek samping antikolinergik, kardiotoksik OD)</li>
+                <li><strong>MAOI:</strong> Phenelzine, Tranylcypromine (interaksi makanan — cheese reaction!)</li>
+            </ul>
+            <p><strong>3. Mood Stabilizer (untuk Bipolar):</strong></p>
+            <ul>
+                <li><strong>Litium:</strong> Gold standard, tapi sempit therapeutic window (toksik kalau level tinggi)</li>
+                <li><strong>Valproat, Karbamazepin:</strong> Alternatif</li>
+            </ul>
+            <p><strong>4. Antidemensia:</strong></p>
+            <ul>
+                <li><strong>Antikolinesterase:</strong> Donepezil, Rivastigmin, Galantamin (untuk Alzheimer)</li>
+                <li><strong>Memantine:</strong> NMDA antagonist (untuk Alzheimer moderate-severe)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">📊</span>
+            <span class="card-title">PPDGJ-III: Hirarki Diagnosis Gangguan Jiwa</span>
+        </div>
+        <div class="card-body">
+            <p>PPDGJ-III (Pedoman Penggolongan dan Diagnosis Gangguan Jiwa) adalah sistem diagnosis yang digunakan di Indonesia. Hirarkinya:</p>
+            <ol>
+                <li><strong>Gangguan Mental Organik:</strong> Gangguan jiwa akibat kerusakan otak (demensia, delirium)</li>
+                <li><strong>Gangguan Mental & Perilaku akibat Zat Psikoaktif:</strong> Kecanduan narkoba, alkohol</li>
+                <li><strong>Skizofrenia:</strong> Gangguan psikotik</li>
+                <li><strong>Gangguan Suasana Perasaan (Mood):</strong> Depresi, bipolar</li>
+                <li><strong>Gangguan Neurotik & Somatoform:</strong> Anxiety, fobia, OCD, somatisasi</li>
+                <li><strong>Gangguan Kepribadian:</strong> Borderline, antisosial, dependen</li>
+                <li><strong>Gangguan Perkembangan:</strong> Autisme, ADHD, retardasi mental</li>
+                <li><strong>Gangguan Identitas Gender:</strong> Transgender, dysphoria gender</li>
+            </ol>
+            <p><strong>Prinsip hirarki:</strong> Kalau ada diagnosis di nomor lebih awal, itu menjadi diagnosis utama. Contoh: Pasien dengan demensia + depresi → diagnosis utama = Gangguan Mental Organik (nomor 1), bukan depresi (nomor 4).</p>
+        </div>
+    </div>
+
+    <div class="mnemonic-box">
+        <div class="mnemonic-title">🧩 Mnemonik: PPDGJ-III Hirarki</div>
+        <div class="mnemonic-text">
+            <span class="mnemonic-big">"Orang Zat Suka Marah, Nanti Perangai Dilihat Gender"</span>
+            <p><strong>O</strong>rganik | <strong>Z</strong>at psikoaktif | <strong>S</strong>kizofrenia | <strong>M</strong>ood | <strong>N</strong>eurotik | <strong>P</strong>ersonality | <strong>D</strong>evelopmental | <strong>G</strong>ender</p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="color:var(--primary); margin-bottom:1.5rem;">📋 Pembahasan Soal-soal Psikiatri</h2>
+
+    <!-- SOAL 4 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 4 (Trapezius)</span>
+        <div class="q-text">Pasien sudah diperiksa dokter jantung dan hasilnya normal. Tapi pasien tetap yakin dia sakit jantung dan tidak percaya dokter. Gangguan apa ini?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Hipokondriasis (Illness Anxiety Disorder)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Hipokondriasis (sekarang disebut Illness Anxiety Disorder)</strong> adalah gangguan di mana pasien memiliki <strong>preokupasi berlebihan</strong> terhadap penyakit serius, meski pemeriksaan medis berulang kali menunjukkan hasil normal.</p>
+            <p><strong>Ciri khas:</strong></p>
+            <ul>
+                <li>Takut memiliki penyakit serius (kanker, jantung, HIV)</li>
+                <li>Cek medis berulang kali</li>
+                <li>Tidak percaya hasil normal</li>
+                <li>Bukan karena "pura-pura" — mereka benar-benar takut</li>
+                <li>Bukan karena ada keluhan fisik yang nyata (beda dengan somatisasi)</li>
+            </ul>
+            <p><strong>Bedakan dengan gangguan lain:</strong></p>
+            <ul>
+                <li><strong>Somatization Disorder:</strong> Banyak keluhan fisik yang berubah-ubah (sakit perut, sakit kepala, sakit punggung — tapi tidak konsisten)</li>
+                <li><strong>Conversion Disorder:</strong> Defisit neurologis tanpa etiologi medis (lumpuh, buta, bisu — tapi pemeriksaan normal)</li>
+                <li><strong>Hipokondriasis:</strong> Fokus pada TAKUT memiliki penyakit, bukan pada keluhan fisik</li>
+            </ul>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Hipokondriasis itu seperti <strong>"orang yang terus-terusan cek HP karena takut ada pesan penting yang terlewat"</strong> — meski tidak ada notifikasi, dia tetap cek berulang kali. Somatisasi itu seperti <strong>"orang yang terus mengeluh HP-nya rusak, tapi keluhannya berubah-ubah: kadang baterai, kadang layar, kadang speaker"</strong>.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"HIPOKONDRI = HIPO-KONDISI = KONDISI SALAH"</strong> — Pasien yakin punya penyakit serius padahal tidak. "Hipo = bawah/kurang, Kondri = kondisi (salah kondisi)"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 5 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 5 (Trapezius)</span>
+        <div class="q-text">Perempuan mengeluh telat haid, badannya sakit di mana-mana (tidak jelas lokasinya), dan keluhannya terus berubah-ubah. Gangguan apa?</div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Gangguan Somatisasi (Somatization Disorder)</strong> adalah kondisi di mana pasien memiliki <strong>banyak keluhan somatik (fisik) yang berubah-ubah</strong> selama bertahun-tahun, melibatkan multiple organ systems.</p>
+            <p><strong>Ciri khas:</strong></p>
+            <ul>
+                <li>Banyak keluhan fisik (sakit kepala, sakit perut, sakit punggung, nyeri otot, dll)</li>
+                <li>Keluhan berubah-ubah dan tidak konsisten</li>
+                <li>Tidak bisa dijelaskan oleh kondisi medis</li>
+                <li>Pasien sering berobat ke banyak dokter dan spesialis</li>
+                <li>Bukan karena "pura-pura" — pasien benar-benar merasakan sakit</li>
+            </ul>
+            <p><strong>Bedakan dengan Hipokondriasis:</strong></p>
+            <ul>
+                <li><strong>Somatisasi:</strong> Fokus pada KELUHAN FISIK yang banyak dan berubah</li>
+                <li><strong>Hipokondriasis:</strong> Fokus pada TAKUT memiliki penyakit serius</li>
+            </ul>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"SOMATISASI = SOK-MANA-TU-SAKIT"</strong> — Somatisasi = sakit di mana-mana (multiple sites). "Somat = Body, isasi = banyak"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 6 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 6 (Trapezius)</span>
+        <div class="q-text">Ny.A (35 tahun) kecelakaan lalu lintas. Setelah sadar, dia bisa beraktivitas normal. Tapi 3 hari terakhir, dia sering lupa apa yang sudah dilakukan. Suaminya bawa ke RS. Jenis amnesia apa?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Anterograde Amnesia</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Amnesia</strong> adalah gangguan memori. Ada 2 tipe utama:</p>
+            <ul>
+                <li><strong>Anterograde Amnesia:</strong> Tidak bisa membentuk memori <strong>BARU</strong> setelah kejadian trauma.
+                    <br>→ Pasien tidak ingat apa yang terjadi SETELAH kecelakaan.
+                    <br>→ Contoh: "Saya tidak ingat apa yang saya lakukan 3 hari ini."</li>
+                <li><strong>Retrograde Amnesia:</strong> Tidak bisa mengingat memori <strong>LAMA</strong> sebelum kejadian trauma.
+                    <br>→ Pasien tidak ingat apa yang terjadi SEBELUM kecelakaan.
+                    <br>→ Contoh: "Saya tidak ingat bagaimana saya kecelakaan."</li>
+            </ul>
+            <p><strong>Pada soal ini:</strong> Pasien tidak ingat aktivitas <strong>3 hari terakhir</strong> (setelah kecelakaan) = <strong>Anterograde Amnesia</strong>.</p>
+            <p><strong>Penyebab:</strong> Trauma kepala yang mengenai <strong>hippocampus</strong> (pusat memori di otak) atau thalamus.</p>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Anterograde amnesia itu seperti <strong>"ponsel yang tidak bisa menyimpan foto baru"</strong> — kamu bisa lihat foto lama di galeri, tapi setiap kali kamu foto sesuatu, fotonya tidak tersimpan. Retrograde amnesia itu seperti <strong>"ponsel yang foto-foto lamanya terhapus"</strong> — kamu bisa foto baru, tapi foto lama hilang.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"ANTERO = AFTER = SESUDAH"</strong> — Anterograde = tidak bisa ingat SESUDAH trauma. Retrograde = tidak bisa ingat SEBELUM trauma. "Antero = After, Retro = Return"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 11 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 11 (Trapezius)</span>
+        <div class="q-text">Pasien dengan fobia sosial (takut berada di keramaian, takut diperhatikan orang). Obat pilihan?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Sertralin (SSRI)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Fobia Sosial (Social Anxiety Disorder)</strong> adalah takut berlebihan terhadap situasi sosial di mana orang mungkin diperhatikan atau dievaluasi orang lain. Pasien takut akan penolakan, dihina, atau memalukan diri.</p>
+            <p><strong>Terapi fobia sosial:</strong></p>
+            <ul>
+                <li><strong>First-line farmakologi:</strong> SSRI (Selective Serotonin Reuptake Inhibitor)
+                    <ul>
+                        <li>Sertralin</li>
+                        <li>Paroxetine</li>
+                        <li>Escitalopram</li>
+                    </ul>
+                </li>
+                <li><strong>Alternatif:</strong> SNRI (Venlafaxine), benzodiazepin jangka pendek (untuk situasi tertentu)</li>
+                <li><strong>Terapi psikologis first-line:</strong> CBT (Cognitive Behavioral Therapy)</li>
+            </ul>
+            <p><strong>Kenapa SSRI?</strong> Karena fobia sosial berhubungan dengan disfungsi serotonin di otak. SSRI meningkatkan kadar serotonin di sinaps → mengurangi anxiety.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"SERTALIN = SOSIAL"</strong> — Sertralin untuk Sosial Anxiety. "Sertalin = Sosial = Sama-sama S"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 28 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 28 (Trapezius)</span>
+        <div class="q-text">Pasien dengan gangguan bipolar yang sedang mengalami episode mania dengan gejala positif (delusi, halusinasi). Obat lini pertama?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Risperidon / Olanzapin / Aripiprazol (Antipsikotik Atipikal)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Bipolar dengan gejala psikotik</strong> (delusi, halusinasi, agitasi parah) memerlukan <strong>antipsikotik atipikal</strong> sebagai first-line.</p>
+            <p><strong>Mengapa antipsikotik atipikal?</strong></p>
+            <ul>
+                <li>Episode mania dengan psikosis = ada "overflow" dopamin di otak</li>
+                <li>Antipsikotik atipikal bekerja sebagai <strong>antagonis dopamin D2</strong> → mengurangi gejala psikotik</li>
+                <li>Atipikal juga memiliki efek mood stabilizing</li>
+            </ul>
+            <p><strong>Pilihan obat:</strong></p>
+            <ul>
+                <li><strong>Risperidon:</strong> Dosis 2-6 mg/hari</li>
+                <li><strong>Olanzapin:</strong> Dosis 10-20 mg/hari (hati-hati: menambah berat badan, diabetes)</li>
+                <li><strong>Aripiprazol:</strong> Dosis 15-30 mg/hari (partial agonis D2 — efek samping lebih sedikit)</li>
+                <li><strong>Quetiapin:</strong> Juga bisa, terutama kalau ada insomnia</li>
+            </ul>
+            <p><strong>Tambahan mood stabilizer:</strong> Litium, Valproat (untuk mencegah relapse)</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"BIPOLAR POSITIF = RISPERIDON"</strong> — Bipolar dengan gejala psikotik = antipsikotik atipikal. "Risperidon = Risiko Psikotik Ditutup"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 48 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 48 (Trapezius)</span>
+        <div class="q-text">Laki-laki 73 tahun didiagnosis demensia Alzheimer. Penatalaksanaan farmakologis?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Rivastigmine</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Alzheimer</strong> adalah penyakit neurodegeneratif di mana sel-sel kolinergik (yang memproduksi asetilkolin) di otak mati secara progresif. Asetilkolin adalah neurotransmitter penting untuk <strong>memori dan kognisi</strong>.</p>
+            <p><strong>Terapi farmakologis Alzheimer:</strong></p>
+            <ol>
+                <li><strong>Antikolinesterase inhibitor:</strong> Meningkatkan asetilkolin yang tersedia di otak
+                    <ul>
+                        <li><strong>Donepezil:</strong> 5-10 mg/hari (reversible, selective, dosis sekali sehari)</li>
+                        <li><strong>Rivastigmine:</strong> 3-12 mg/hari (juga menghambat butyrylcholinesterase, ada patch transdermal)</li>
+                        <li><strong>Galantamine:</strong> 8-24 mg/hari (allosteric modulator + inhibitor)</li>
+                    </ul>
+                </li>
+                <li><strong>Memantine:</strong> NMDA receptor antagonist (untuk moderate-severe Alzheimer)
+                    <ul>
+                        <li>Dosis: 10-20 mg/hari</li>
+                        <li>Mekanisme: Mengurangi eksitotoksisitas glutamat</li>
+                    </ul>
+                </li>
+            </ol>
+            <p><strong>Kenapa Rivastigmine?</strong> Rivastigmine adalah pilihan yang baik karena:</p>
+            <ul>
+                <li>Dual inhibitor (ACHE + BuCHE)</li>
+                <li>Tersedia dalam patch (transdermal) → mengurangi efek samping GI</li>
+                <li>Efektif untuk Alzheimer dan Lewy Body Dementia</li>
+            </ul>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Alzheimer itu seperti <strong>"perpustakaan yang kehilangan banyak buku setiap hari"</strong>. Antikolinesterase itu seperti <strong>"memperlambat proses kehilangan buku"</strong> — bukan mengembalikan buku yang hilang, tapi membuat buku yang tersisa lebih sering dibaca. Obat ini tidak menyembuhkan Alzheimer, tapi memperlambat penurunannya.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"ALZHEIMER = ASETILKOLIN HILANG"</strong> — Alzheimer = defisit kolinergik → berikan obat yang meningkatkan asetilkolin (antikolinesterase). "Rivastigmine = River of Memory"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 49 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 49 (Trapezius)</span>
+        <div class="q-text">Tn.X (20 tahun) menuduh dosennya mencuri uang kuliahnya. Dia juga yakin tempat kuliahnya hanya kedok untuk organisasi kejahatan internasional. Diagnosis?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Skizofrenia Paranoid</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Skizofrenia Paranoid</strong> adalah subtipe skizofrenia yang paling umum. Ditandai dengan:</p>
+            <ul>
+                <li><strong>Delusi persecutory:</strong> Yakin dikejar, dijahati, diawasi, dicuri</li>
+                <li><strong>Delusi grandiose:</strong> Yakin memiliki kekuatan/pengetahuan istimewa</li>
+                <li><strong>Delusi reference:</strong> Yakin hal-hal di sekitarnya punya makna khusus untuknya</li>
+                <li><strong>Halusinasi:</strong> Biasanya halusinasi pendengaran (mendengar suara)</li>
+                <li><strong>Relatif terjaga:</strong> Afek, kognisi, dan fungsi sosial lebih baik dari subtipe lain</li>
+            </ul>
+            <p><strong>Pada soal ini:</strong></p>
+            <ul>
+                <li>"Menuduh dosen mencuri uang" = <strong>delusi persecutory</strong></li>
+                <li>"Tempat kuliah kedok organisasi kejahatan" = <strong>delusi sistematis</strong> (keyakinan kompleks)</li>
+            </ul>
+            <p><strong>Bedakan dengan subtipe lain:</strong></p>
+            <ul>
+                <li><strong>Katatonik:</strong> Stupor (diam kaku), posturing, negativisme, echolalia</li>
+                <li><strong>Disorganized:</strong> Afek datar, perilaku kacau, tidak teratur, tidak ada delusi sistematis</li>
+                <li><strong>Residual:</strong> Hanya gejala negatif (afek datar, autism) tanpa gejala positif</li>
+            </ul>
+        </div>
+
+        <div class="q-analogy">
+            <div class="q-analogy-title">🎭 Analogi</div>
+            <p>Skizofrenia paranoid itu seperti <strong>"main game detective yang terlalu serius"</strong> — pasien melihat "clue" di mana-mana dan yakin ada konspirasi besar. Setiap orang di sekitarnya adalah "suspect". Tapi bedanya, ini bukan game — mereka benar-benar yakin!</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"PARANOID = PARA-NOID = TAKUT DISELISIHKAN"</strong> — Paranoid = curiga semua orang mau jahat. "Para = banyak, Noid = takut (android takut)"</p>
+        </div>
+    </div>
+</div>
+
+<!-- ANATOMI -->
+<div id="anatomi" class="section">
+    <h2 class="section-title">🗺️ Neuroanatomi: Peta Otak & Saraf</h2>
+
+    <div class="section-intro">
+        <strong>Neuroanatomi</strong> adalah peta lengkap otak dan saraf tubuh. Memahami anatomi neurologi itu seperti memahami <span class="highlight">peta kota</span> — kalau kamu tahu jalan-jalan utama, kamu bisa tahu kemana arahnya kalau ada macet (lesi).
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">🧠</span>
+            <span class="card-title">Pusat Kesadaran: Thalamus</span>
+        </div>
+        <div class="card-body">
+            <p><strong>Thalamus</strong> adalah "stasiun transit" utama di otak. Semua informasi sensorik (kecuali bau) melewati thalamus sebelum sampai ke korteks.</p>
+            <p><strong>Tapi yang lebih penting:</strong> Thalamus juga merupakan pusat <strong>kesadaran</strong> melalui <strong>ARAS (Ascending Reticular Activating System)</strong>. ARAS adalah jaringan neuron di batang otak dan thalamus yang menjaga kita tetap sadar.</p>
+            <p><strong>Kalau thalamus rusak:</strong> Koma atau vegetative state.</p>
+            <p><strong>Bedakan dengan struktur lain:</strong></p>
+            <ul>
+                <li><strong>Hippocampus:</strong> Pusat memori (bukan kesadaran)</li>
+                <li><strong>Korteks:</strong> Fungsi tinggi (pikir, bahasa, gerak) — tapi tidak mengontrol "sadar/tidak sadar"</li>
+                <li><strong>Serebelum:</strong> Koordinasi gerak (bukan kesadaran)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">👁️</span>
+            <span class="card-title">Nervus Kranial VII (Facialis) - UMN vs LMN</span>
+        </div>
+        <div class="card-body">
+            <p><strong>Nervus Fasialis (CN VII)</strong> mengontrol otot wajah. Tapi ada perbedaan penting antara lesi <strong>UMN (Upper Motor Neuron)</strong> dan <strong>LMN (Lower Motor Neuron)</strong>:</p>
+
+            <div class="compare-grid">
+                <div class="compare-box compare-left">
+                    <div class="compare-title">🔵 UMN Lesi (Korteks/Batang Otak)</div>
+                    <ul>
+                        <li>Hanya <strong>SEBAGIAN BAWAH wajah</strong> yang lemah</li>
+                        <li><strong>Kontralateral</strong> (lawan sisi lesi)</li>
+                        <li><strong>Alis masih bisa naik!</strong> (karena otot wajah atas diinervasi bilateral)</li>
+                        <li>Contoh: Stroke di korteks motorik kanan → sisi kiri bawah wajah lemah</li>
+                    </ul>
+                </div>
+                <div class="compare-box compare-right">
+                    <div class="compare-title">🟢 LMN Lesi (Nuklear/Perifer)</div>
+                    <ul>
+                        <li><strong>SEMUA otot wajah</strong> lemah</li>
+                        <li><strong>Ipsilateral</strong> (sisi sama dengan lesi)</li>
+                        <li><strong>Alis tidak bisa naik!</strong></li>
+                        <li>Contoh: Bell Palsy → sisi kanan semua otot wajah lemah</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p><strong>Kenapa alis masih naik pada UMN?</strong> Karena otot wajah atas (frontalis, orbicularis oculi) diinervasi <strong>bilateral</strong> — kedua belah hemisfer mengontrolnya. Jadi kalau satu sisi korteks rusak, sisi lain masih bisa mengangkat alis.</p>
+        </div>
+    </div>
+
+    <div class="mnemonic-box">
+        <div class="mnemonic-title">🗺️ Mnemonik: CN VII UMN vs LMN</div>
+        <div class="mnemonic-text">
+            <span class="mnemonic-big">"UMN = Bawah Kontra, LMN = Semua Ipsi"</span>
+            <p><strong>UMN:</strong> Hanya <strong>B</strong>awah <strong>K</strong>ontralateral (BK)<br>
+            <strong>LMN:</strong> <strong>S</strong>emua <strong>I</strong>psilateral (SI)</p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="color:var(--primary); margin-bottom:1.5rem;">📋 Pembahasan Soal Anatomi</h2>
+
+    <!-- SOAL 12 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 12</span>
+        <div class="q-text">Pusat kesadaran manusia terletak di?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Thalamus</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Thalamus</strong> adalah struktur di tengah otak yang berfungsi sebagai:</p>
+            <ol>
+                <li><strong>Stasiun transit sensorik:</strong> Semua informasi sensorik (rasa, lihat, dengar, sentuh) melewati thalamus sebelum sampai ke korteks</li>
+                <li><strong>Pusat kesadaran:</strong> Melalui ARAS (Ascending Reticular Activating System) yang berjalan dari batang otak ke thalamus</li>
+            </ol>
+            <p><strong>Bedakan dengan:</strong></p>
+            <ul>
+                <li><strong>Hippocampus:</strong> Memori (bukan kesadaran)</li>
+                <li><strong>Korteks:</strong> Fungsi kognitif tinggi (pikir, bahasa, gerak)</li>
+                <li><strong>Serebelum:</strong> Koordinasi gerak</li>
+            </ul>
+            <p><strong>Kalau thalamus rusak:</strong> Pasien bisa koma atau vegetative state.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"THALAMUS = TEMPAT KESADARAN HIDUP"</strong> — Thalamus = pusat kesadaran. "Thalamus = The-Life-Amplifier"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 14 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 14</span>
+        <div class="q-text">Ibu rumah tangga setelah memasak tiba-tiba jatuh dan bicara pelo (tidak jelas). Kondisi ini disebut?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Afasia</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Afasia</strong> adalah gangguan bahasa akibat kerusakan di <strong>korteks bahasa</strong> (biasanya di hemisfer dominan — kiri untuk 95% orang right-handed).</p>
+            <p><strong>Tipe afasia:</strong></p>
+            <ul>
+                <li><strong>Broca Aphasia (Ekspresif/Motorik):</strong>
+                    <ul>
+                        <li>Lesi di <strong>frontal lobe</strong> (pars opercularis)</li>
+                        <li>Bicara pelan, effortful, tidak lancar</li>
+                        <li>Pemahaman relatif terjaga</li>
+                        <li>Pasien frustrasi karena tahu mau ngomong apa tapi tidak bisa keluar</li>
+                        <li>Contoh: "Saya... mau... minum... air" (setiap kata butuh usaha besar)</li>
+                    </ul>
+                </li>
+                <li><strong>Wernicke Aphasia (Reseptif/Sensorik):</strong>
+                    <ul>
+                        <li>Lesi di <strong>temporal lobe</strong> (posterior superior)</li>
+                        <li>Bicara lancar tapi tidak bermakna (word salad)</li>
+                        <li>Pemahaman sangat buruk</li>
+                        <li>Pasien tidak sadar ada masalah</li>
+                        <li>Contoh: "Saya pergi ke toko biru makan langit lari cepat"</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>Pada soal ini:</strong> "Bicara pelo" → kemungkinan <strong>Broca aphasia</strong> (karena effortful, tidak lancar).</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"AFASIA = A-FA-SIA = AFA SUSAH BICARA"</strong> — Afasia = gangguan bahasa. "Afasia = A-Fail-Speak"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 24 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 24</span>
+        <div class="q-text">Pasien tidak bisa mengenali benda sehari-hari (misalnya sendok) meski penglihatannya normal. Kondisi ini disebut?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Agnosia</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Agnosia</strong> adalah gangguan pengenalan — pasien tidak bisa mengenali objek, suara, wajah, atau sensasi meski indra sensoriknya (mata, telinga, kulit) berfungsi normal.</p>
+            <p><strong>Tipe agnosia:</strong></p>
+            <ul>
+                <li><strong>Visual Agnosia:</strong> Tidak bisa mengenali objek dengan mata (tapi bisa dengan sentuhan). Contoh: Tidak tahu itu sendok meski dilihat.</li>
+                <li><strong>Auditory Agnosia:</strong> Tidak bisa mengenali suara (tapi bisa mendengar).</li>
+                <li><strong>Tactile Agnosia (Astereognosis):</strong> Tidak bisa mengenali objek dengan sentuhan (tapi bisa dengan mata).</li>
+                <li><strong>Prosopagnosia:</strong> Tidak bisa mengenali wajah (termasuk wajah sendiri atau keluarga!).</li>
+            </ul>
+            <p><strong>Bedakan dengan:</strong></p>
+            <ul>
+                <li><strong>Afasia:</strong> Gangguan bahasa (tidak bisa menyebut nama benda)</li>
+                <li><strong>Agnosia:</strong> Gangguan pengenalan (tidak tahu fungsi/makna benda)</li>
+            </ul>
+            <p><strong>Lokasi lesi:</strong> Korteks asosiasi (parietal, okspital, temporal) — area yang mengolah makna dari informasi sensorik.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"AGNOSIA = A-GNO-SIA = A-GNO (TAK TAHU) SIA"</strong> — Agnosia = tidak tahu/mengenal. "Agnosia = A-No-See-Ya (tidak melihat/kenal)"</p>
+        </div>
+    </div>
+
+    <!-- SOAL 33 -->
+    <div class="q-card">
+        <span class="q-number">SOAL 33</span>
+        <div class="q-text">Pasien mengalami kelumpuhan/kelemahan di sisi kiri seluruh tubuh. Lesi otak ada di?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Hemisfer Kanan (Cerebri Kanan)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p><strong>Traktus piramidal</strong> (jalur motorik utama dari otak ke tubuh) <strong>cross (memotong)</strong> di <strong>medulla oblongata</strong> (bagian bawah batang otak). Jadi:</p>
+            <ul>
+                <li><strong>Motor kiri</strong> dikontrol oleh <strong>otak kanan</strong> (kontralateral)</li>
+                <li><strong>Motor kanan</strong> dikontrol oleh <strong>otak kiri</strong> (kontralateral)</li>
+            </ul>
+            <p><strong>Exception (pengecualian):</strong></p>
+            <ul>
+                <li><strong>CN VII (Fasialis) lower face:</strong> UMN = kontralateral (sama dengan motorik tubuh)</li>
+                <li><strong>CN XII (Hypoglossal):</strong> LMN = ipsilateral (lidah deviasi ke sisi lesi)</li>
+            </ul>
+            <p><strong>Jadi kalau soal bilang "motor kiri kena" → lesi di otak KANAN.</strong></p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"KIRI KENA = KANAN LESI"</strong> — Motorik kontralateral. "Kontra = Lawan. Kanan lawan kiri, kiri lawan kanan"</p>
+        </div>
+    </div>
+</div>
+
+<!-- LCS & GCS -->
+<div id="lcs-gcs" class="section">
+    <h2 class="section-title">💉 LCS & GCS: Pemeriksaan Penting</h2>
+
+    <div class="section-intro">
+        <strong>GCS (Glasgow Coma Scale)</strong> adalah skor yang digunakan untuk menilai tingkat kesadaran pasien. Ini seperti <span class="highlight">"termometer kesadaran"</span> — semakin rendah skornya, semakin parah kerusakan otaknya.
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="card-icon">📊</span>
+            <span class="card-title">Glasgow Coma Scale (GCS)</span>
+        </div>
+        <div class="card-body">
+            <p>GCS terdiri dari 3 komponen:</p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Komponen</th>
+                            <th>Skor</th>
+                            <th>Kriteria</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4"><strong>EYE (Mata)</strong></td>
+                            <td>4</td>
+                            <td>Spontan (buka sendiri)</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Ke perintah ("buka mata!")</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ke nyeri</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Tidak ada respons</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="5"><strong>VERBAL (Bicara)</strong></td>
+                            <td>5</td>
+                            <td>Oriented (tahu waktu, tempat, orang)</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Confused (bingung)</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Inappropriate words (kata tidak sesuai)</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Incomprehensible sounds (mengerang/mendengus)</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Tidak ada respons</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="6"><strong>MOTOR (Gerak)</strong></td>
+                            <td>6</td>
+                            <td>Ke perintah ("angkat tangan!")</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Lokalisi nyeri (menepis sumber nyeri)</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Withdrawal (menarik anggota dari nyeri)</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Fleksi abnormal (decorticate)</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ekstensi (decerebrate)</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Tidak ada respons</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p><strong>Interpretasi total skor:</strong></p>
+            <ul>
+                <li><strong>GCS 15:</strong> Sadar penuh</li>
+                <li><strong>GCS 13-14:</strong> Pensa ringan (confusion, disorientasi)</li>
+                <li><strong>GCS 9-12:</strong> Pensa sedang (stupor, semikoma)</li>
+                <li><strong>GCS 3-8:</strong> <span class="highlight-red">KOMA</span> → indikasi intubasi!</li>
+                <li><strong>GCS 3:</strong> Deep coma (no response)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mnemonic-box">
+        <div class="mnemonic-title">💉 Mnemonik: GCS</div>
+        <div class="mnemonic-text">
+            <span class="mnemonic-big">"EVM = 6-5-4-3-2-1"</span>
+            <p><strong>E</strong>ye: 4-3-2-1<br>
+            <strong>V</strong>erbal: 5-4-3-2-1<br>
+            <strong>M</strong>otor: 6-5-4-3-2-1</p>
+            <p>🧠 <strong>"Koma = GCS ≤8 = INTUBASI!"</strong></p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="color:var(--primary); margin-bottom:1.5rem;">📋 Pembahasan Soal LCS & GCS</h2>
+
+    <!-- SOAL 51 TRAPEZIUS -->
+    <div class="q-card">
+        <span class="q-number">SOAL 51 (Trapezius)</span>
+        <div class="q-text">Pasien dipanggil namanya tidak bereaksi. Saat dirangsang nyeri, dia membuka mata, dapat menepis sumber nyeri, tapi hanya bisa mengerang "arrrhkk". Level kesadarannya?</div>
+
+        <div class="q-answer">
+            <div class="q-answer-title">✅ Jawaban: Sopor (Pensa Sedang)</div>
+        </div>
+
+        <div class="q-explain">
+            <div class="q-explain-title">📖 Penjelasan Detail</div>
+            <p>Mari hitung GCS-nya:</p>
+            <ul>
+                <li><strong>Eye:</strong> 2 (membuka mata ke nyeri)</li>
+                <li><strong>Verbal:</strong> 2 (mengerang incomprehensible)</li>
+                <li><strong>Motor:</strong> 5 (melokalisir nyeri — menepis sumber nyeri)</li>
+            </ul>
+            <p><strong>Total GCS = 2 + 2 + 5 = 9</strong></p>
+            <p><strong>Kategori kesadaran:</strong></p>
+            <ul>
+                <li><strong>Compos mentis:</strong> GCS 15 (sadar penuh)</li>
+                <li><strong>Somnolen:</strong> GCS 13-14 (mengantuk tapi masih bisa diperintah)</li>
+                <li><strong>Sopor:</strong> GCS 9-12 (tidak sadar, hanya respons ke nyeri)</li>
+                <li><strong>Koma:</strong> GCS 3-8 (tidak respons sama sekali)</li>
+            </ul>
+            <p>GCS 9 masuk kategori <strong>Sopor</strong> — pasien tidak sadar, tapi masih ada respons terhadap nyeri.</p>
+        </div>
+
+        <div class="q-tip">
+            <div class="q-tip-title">💡 Tips Dokter Muda</div>
+            <p><strong>"SOPOR = SEDIKIT SADAR"</strong> — Sopor = sadar sedikit (respons nyeri). Koma = tidak sadar sama sekali. "Sopor = Semi-Open, Koma = Closed"</p>
+        </div>
+    </div>
+</div>
+
+<!-- DAFTAR SOAL -->
+<div id="daftar" class="section">
+    <h2 class="section-title">📋 Daftar Lengkap Soal & Jawaban</h2>
+
+    <div class="section-intro">
+        Berikut adalah daftar lengkap semua soal dari kedua file PDF beserta jawaban singkatnya. Gunakan ini untuk review cepat sebelum ujian!
+    </div>
+
+    <h3 style="color:var(--primary); margin:1.5rem 0;">📄 File 1: MCQ 6.E 2025</h3>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr><th>No</th><th>Soal</th><th>Jawaban</th><th>Topik</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Indikasi mutlak LP</td><td>Impendesi hernia otak</td><td>LCS</td></tr>
+                <tr><td>2</td><td>Tidak langsung ditemukan LCS</td><td>Opening pressure</td><td>LCS</td></tr>
+                <tr><td>3</td><td>Meningitis HIV negatif</td><td>S.pneumoniae/N.meningitidis</td><td>Infeksi</td></tr>
+                <tr><td>4</td><td>Obat abses otak empiris kecuali</td><td>Ceftazidim</td><td>Infeksi</td></tr>
+                <tr><td>5</td><td>Gejala tambahan meningitis</td><td>HIV positif</td><td>Infeksi</td></tr>
+                <tr><td>6</td><td>Kapan terapi definitif meningitis</td><td>Kultur LCS keluar</td><td>Infeksi</td></tr>
+                <tr><td>7</td><td>Romberg positif</td><td>Vestibular perifer/sensory</td><td>Vertigo</td></tr>
+                <tr><td>8</td><td>↑TIK tanpa stroke, pemeriksaan</td><td>CT scan tanpa kontras</td><td>Stroke</td></tr>
+                <tr><td>9</td><td>Diplococcus di kerokan kulit</td><td>N.meningitidis</td><td>Infeksi</td></tr>
+                <tr><td>10</td><td>Gram(+) anaerob di tanah, toksin</td><td>Tetanospasmin</td><td>Infeksi</td></tr>
+                <tr><td>11</td><td>Gangguan keseimbangan, pelo</td><td>Cerebellum</td><td>Anatomi</td></tr>
+                <tr><td>12</td><td>Pusat kesadaran</td><td>Thalamus</td><td>Anatomi</td></tr>
+                <tr><td>13</td><td>Generator, asap hitam, tidak sadar</td><td>Ensefalopati hipoksia</td><td>Ensefalitis</td></tr>
+                <tr><td>14</td><td>Setelah memasak jatuh, bicara pelo</td><td>Afasia</td><td>Anatomi</td></tr>
+                <tr><td>15</td><td>Semua anggota gerak kejang, ILAE</td><td>General motor seizure</td><td>Epilepsi</td></tr>
+                <tr><td>16</td><td>Usia 60 tahun, Parkinson obat</td><td>Entakapon</td><td>Parkinson</td></tr>
+                <tr><td>17</td><td>Nyeri kepala profilaksis evidence A</td><td>Propranolol</td><td>Nyeri Kepala</td></tr>
+                <tr><td>18</td><td>Nyeri kepala tanpa aura obat</td><td>Sumatriptan</td><td>Nyeri Kepala</td></tr>
+                <tr><td>19</td><td>Kriteria nyeri kepala</td><td>Serangan minimal 2x</td><td>Nyeri Kepala</td></tr>
+                <tr><td>20</td><td>Vertigo, tidur kiri lebih berat</td><td>BPPV</td><td>Vertigo</td></tr>
+                <tr><td>21</td><td>Kejang otot, kelonjotan, benda jatuh</td><td>Myoklonik</td><td>Epilepsi</td></tr>
+                <tr><td>22</td><td>Tumor intrakranial kecuali</td><td>-</td><td>Tumor</td></tr>
+                <tr><td>23</td><td>Nyeri otot leher, rangsangan intrakranial</td><td>Otot kepala dan leher</td><td>Nyeri Kepala</td></tr>
+                <tr><td>24</td><td>Tidak bisa menentukan sendok</td><td>Agnosia</td><td>Anatomi</td></tr>
+                <tr><td>25</td><td>Mendatar ke gyrus</td><td>Perdarahan subarachnoid</td><td>Trauma</td></tr>
+                <tr><td>26</td><td>CT scan bikonvek</td><td>Perdarahan sub epidural</td><td>Trauma</td></tr>
+                <tr><td>27</td><td>Nyeri bokong sampai ibu jari kaki</td><td>Radikulopati</td><td>Anatomi</td></tr>
+                <tr><td>28</td><td>Anak kejang pemeriksaan penunjang</td><td>EEG</td><td>Epilepsi</td></tr>
+                <tr><td>29</td><td>Romberg mata terbuka/tertutup (+)</td><td>Vertigo perifer</td><td>Vertigo</td></tr>
+                <tr><td>30</td><td>Kelainan medulla spinalis</td><td>Paresis, gangguan miksi, disfungi seksual</td><td>Anatomi</td></tr>
+                <tr><td>31</td><td>Myastenia gravis terkena di</td><td>Reseptor asetilkolin</td><td>Neuromuskular</td></tr>
+                <tr><td>32</td><td>BPPV setelah manuver, ttx kecuali</td><td>Analog histamin</td><td>Vertigo</td></tr>
+                <tr><td>33</td><td>Motor kiri kena, dx kena</td><td>Cerebri kanan</td><td>Anatomi</td></tr>
+                <tr><td>34</td><td>Kena lempar kepala, TD 170</td><td>Lesi desak ruang</td><td>Stroke</td></tr>
+                <tr><td>35</td><td>Perempuan, ptosis, kelemahan tungkai</td><td>Neuromuscular junction</td><td>Neuromuskular</td></tr>
+                <tr><td>36</td><td>BPPV ttx</td><td>Betahistin</td><td>Vertigo</td></tr>
+                <tr><td>37</td><td><1 jam kesadaran membaik</td><td>TIA</td><td>Stroke</td></tr>
+                <tr><td>38</td><td>Jantung berdebar, rujuk jantung</td><td>Emboli cerebri</td><td>Stroke</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 style="color:var(--primary); margin:1.5rem 0;">📄 File 2: MCQ 6.3 TRAPEZIUS</h3>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr><th>No</th><th>Soal</th><th>Jawaban</th><th>Topik</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Gangguan panik</td><td>-</td><td>Psikiatri</td></tr>
+                <tr><td>2</td><td>Yang bukan tentang OCD</td><td>-</td><td>Psikiatri</td></tr>
+                <tr><td>3</td><td>Cephalosporin 3 untuk</td><td>Meningitis</td><td>Infeksi</td></tr>
+                <tr><td>4</td><td>Mengira sakit jantung padahal tidak</td><td>Hipokondriasis</td><td>Psikiatri</td></tr>
+                <tr><td>5</td><td>Telat haid, badan sakit lupa dimana</td><td>Somatisasi</td><td>Psikiatri</td></tr>
+                <tr><td>6</td><td>Amnesia pasca trauma kepala</td><td>Anterograde</td><td>Psikiatri</td></tr>
+                <tr><td>7</td><td>NAPZA golongan 2</td><td>Morfin dan petidin</td><td>Psikiatri</td></tr>
+                <tr><td>8</td><td>LCS xantochromic</td><td>Meningitis TB</td><td>Infeksi</td></tr>
+                <tr><td>9</td><td>Serotipe sering pada bayi/anak</td><td>Serotipe b</td><td>Infeksi</td></tr>
+                <tr><td>10</td><td>Anak 4thn kejang 20 menit</td><td>Status epileptikus</td><td>Epilepsi</td></tr>
+                <tr><td>11</td><td>Obat fobia sosial</td><td>Sertaline</td><td>Psikiatri</td></tr>
+                <tr><td>12</td><td>Kelemahan wajah kiri</td><td>Nervus VII</td><td>Anatomi</td></tr>
+                <tr><td>13</td><td>Tidak bisa tidur setelah BZD</td><td>Sundowner syndrome</td><td>Psikiatri</td></tr>
+                <tr><td>14</td><td>Perubahan perilaku</td><td>Lobus frontalis</td><td>Anatomi</td></tr>
+                <tr><td>15</td><td>Obat tremor aksi</td><td>Propranolol</td><td>Parkinson</td></tr>
+                <tr><td>16</td><td>Sentakan ekstremitas, benda jatuh</td><td>Myoklonus</td><td>Epilepsi</td></tr>
+                <tr><td>17</td><td>Infeksi SSP dewasa, diagnosis banding</td><td>Pemeriksaan HIV</td><td>Infeksi</td></tr>
+                <tr><td>18</td><td>Ptosis, tanpa riwayat infeksi</td><td>Miller Fisher syndrome</td><td>Neuromuskular</td></tr>
+                <tr><td>19</td><td>Obat anti kolinesterase</td><td>Neostigmin/Pyridostigmin</td><td>Neuromuskular</td></tr>
+                <tr><td>20</td><td>Tumor intra-axial kecuali</td><td>Meningioma</td><td>Tumor</td></tr>
+                <tr><td>21</td><td>Antidepresan trisiklik</td><td>Amitriptilin</td><td>Psikiatri</td></tr>
+                <tr><td>22</td><td>Riwayat parese, sekarang pikun</td><td>Demensia vaskular</td><td>Psikiatri</td></tr>
+                <tr><td>23</td><td>Diagnosis banding demensia</td><td>Delirium</td><td>Psikiatri</td></tr>
+                <tr><td>24</td><td>Pemeriksaan BPPV kecuali</td><td>Epley maneuver</td><td>Vertigo</td></tr>
+                <tr><td>25</td><td>Nistagmus setelah manuver, ttx kecuali</td><td>Analog histamin</td><td>Vertigo</td></tr>
+                <tr><td>26</td><td>Antidepresan cheese reaction</td><td>MAOI</td><td>Psikiatri</td></tr>
+                <tr><td>27</td><td>Obat kecanduan main game</td><td>Escitalopram</td><td>Psikiatri</td></tr>
+                <tr><td>28</td><td>Bipolar positif, lini pertama</td><td>Risperidone/Olanzapine</td><td>Psikiatri</td></tr>
+                <tr><td>29</td><td>Bipolar depresi berat</td><td>Quetiapine</td><td>Psikiatri</td></tr>
+                <tr><td>30</td><td>Gangguan jalan pikiran</td><td>Flight of ideas</td><td>Psikiatri</td></tr>
+                <tr><td>31</td><td>Sirkumstansial termasuk</td><td>Bentuk pikiran</td><td>Psikiatri</td></tr>
+                <tr><td>32</td><td>Ibu yakin anak kanker, dokter bilang KGB</td><td>Hipokondriasis</td><td>Psikiatri</td></tr>
+                <tr><td>33</td><td>Interpretasi Romberg</td><td>Perifer vs Sentral</td><td>Vertigo</td></tr>
+                <tr><td>34</td><td>Diagnosis banding demensia</td><td>Delirium</td><td>Psikiatri</td></tr>
+                <tr><td>35</td><td>Diagnosis banding Alzheimer</td><td>GAM</td><td>Psikiatri</td></tr>
+                <tr><td>36</td><td>Ciri perdarahan epidural</td><td>Benar semua</td><td>Trauma</td></tr>
+                <tr><td>37</td><td>Wanita 40th sesak di kamar mandi tertutup</td><td>Klaustrofobia</td><td>Psikiatri</td></tr>
+                <tr><td>38</td><td>Anak main game, berbohong</td><td>Internet gaming disorder</td><td>Psikiatri</td></tr>
+                <tr><td>39</td><td>GAF score</td><td>0-100</td><td>Psikiatri</td></tr>
+                <tr><td>40</td><td>Takut gemuk, IMT di bawah normal</td><td>Anoreksia nervosa</td><td>Psikiatri</td></tr>
+                <tr><td>41</td><td>Stadium Parkinson Hoehn-Yahr</td><td>1-5</td><td>Parkinson</td></tr>
+                <tr><td>42</td><td>Gangguan somatisasi</td><td>-</td><td>Psikiatri</td></tr>
+                <tr><td>43</td><td>Gangguan konversi</td><td>-</td><td>Psikiatri</td></tr>
+                <tr><td>44</td><td>Hirarki PPDGJ III</td><td>O-Z-S-M-N-P-D-G</td><td>Psikiatri</td></tr>
+                <tr><td>45</td><td>Wanita 54th nyeri kepala 3 minggu, demam</td><td>Antibiotik empiris</td><td>Infeksi</td></tr>
+                <tr><td>46</td><td>Tumor Verocay bodies</td><td>Schwannoma</td><td>Tumor</td></tr>
+                <tr><td>47</td><td>Skizofrenia katatonik</td><td>Stupor</td><td>Psikiatri</td></tr>
+                <tr><td>48</td><td>Demensia Alzheimer farmakologi</td><td>Rivastigmine</td><td>Psikiatri</td></tr>
+                <tr><td>49</td><td>Tn.X menuduh dosen, organisasi kejahatan</td><td>Skizofrenia paranoid</td><td>Psikiatri</td></tr>
+                <tr><td>50</td><td>Stroke gold standard</td><td>CT scan tanpa kontras</td><td>Stroke</td></tr>
+                <tr><td>51</td><td>GCS: tidak bereaksi, buka mata ke nyeri</td><td>Sopor</td><td>GCS</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+    window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
